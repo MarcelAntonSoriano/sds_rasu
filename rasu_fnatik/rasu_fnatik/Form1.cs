@@ -19,7 +19,8 @@ namespace rasu_fnatik
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
+
     }
 }
