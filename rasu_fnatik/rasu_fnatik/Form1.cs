@@ -16,10 +16,5 @@ namespace rasu_fnatik
         {
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
