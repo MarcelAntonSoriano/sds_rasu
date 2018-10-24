@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rasu_fnatik
+namespace Menu
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace rasu_fnatik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new menu());
         }
     }
 }
