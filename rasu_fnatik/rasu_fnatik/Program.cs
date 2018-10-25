@@ -16,7 +16,7 @@ namespace rasu_fnatik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new login());
+
             var main = new login();
             main.FormClosed += new FormClosedEventHandler(FormClosed);
             main.Show();

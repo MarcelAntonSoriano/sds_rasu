@@ -20,7 +20,15 @@ namespace rasu_fnatik
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if(textBox1.Text != null && textBox2.Text != null)
+            if(textBox1.Text != null)
+            {
+                btn_login.Enabled = true;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text != null)
             {
                 btn_login.Enabled = true;
             }
@@ -32,6 +40,6 @@ namespace rasu_fnatik
             frmMenu menu_metro = new frmMenu();
             menu_metro.Show();
             this.Close();
-        }
+        } 
     }
 }
