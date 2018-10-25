@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Menu
 {
-    public partial class menu : Form
+    public partial class frmMenu : Form
     {
-        public menu()
+        public frmMenu()
         {
             InitializeComponent();
+        }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

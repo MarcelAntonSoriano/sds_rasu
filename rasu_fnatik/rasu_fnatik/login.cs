@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Menu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,18 @@ namespace rasu_fnatik
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if(textBox1.Text != null && textBox2.Text != null)
+            {
+                btn_login.Enabled = true;
+            }
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
             //logar y chapar
+            frmMenu menu_metro = new frmMenu();
+            menu_metro.Show();
+            this.Close();
         }
     }
 }

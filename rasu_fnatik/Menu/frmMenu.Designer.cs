@@ -1,6 +1,6 @@
 ﻿namespace Menu
 {
-    partial class menu
+    partial class frmMenu
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -38,6 +38,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.menu_Load);
             this.ResumeLayout(false);
 
         }

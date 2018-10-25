@@ -95,6 +95,7 @@
             // 
             // btn_login
             // 
+            this.btn_login.Enabled = false;
             this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_login.FlatAppearance.BorderSize = 3;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
