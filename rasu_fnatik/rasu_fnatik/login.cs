@@ -37,9 +37,15 @@ namespace rasu_fnatik
         private void btn_login_Click(object sender, EventArgs e)
         {
             //logar y chapar
-            frmMenu menu_metro = new frmMenu();
-            menu_metro.Show();
-            this.Close();
+            if ((textBox2.Text).Equals("hola")) {
+                frmMenu menu_metro = new frmMenu();
+                menu_metro.Show();
+                this.Close();
+            }
+            else
+            {
+                label3.Visible = true;
+            }
         } 
     }
 }

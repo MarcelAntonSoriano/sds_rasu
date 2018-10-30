@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rasu_fnatik", "rasu_fnatik\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{97BD180E-A4C3-43C2-A4E4-CC67C093C048}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "About", "About\About.csproj", "{FF04E1A9-0E24-4324-93BC-BBB5B9C530A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{97BD180E-A4C3-43C2-A4E4-CC67C093C048}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97BD180E-A4C3-43C2-A4E4-CC67C093C048}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97BD180E-A4C3-43C2-A4E4-CC67C093C048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF04E1A9-0E24-4324-93BC-BBB5B9C530A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF04E1A9-0E24-4324-93BC-BBB5B9C530A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF04E1A9-0E24-4324-93BC-BBB5B9C530A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF04E1A9-0E24-4324-93BC-BBB5B9C530A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
