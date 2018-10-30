@@ -15,9 +15,9 @@ namespace rasu_fnatik
 {
     public partial class login : Form
     {
-        public string connectionString = "Server=W10B304PC21\\SQLEXPRESS;Database=SecureCode;Trusted_Connection=True";
+        public string connectionString = "Server=W10B304PC21\\SQLEXPRESS;Database=SecureCore;User Id=FNATIK;Password=123";
         public SqlConnection conexion = new SqlConnection();
-        DataSet ds;
+        DataSet ds = new DataSet();
         SqlDataAdapter da;
         SqlDataReader dr;
 
