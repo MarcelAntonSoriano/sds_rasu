@@ -26,17 +26,12 @@ namespace rasu_fnatik
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        
+        private void textBox(object sender, EventArgs e)
         {
-            if(textBox1.Text != null)
-            {
-                btn_login.Enabled = true;
-            }
-        }
+            TextBox tb = (TextBox)sender;
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox2.Text != null)
+            if (tb.Text != null)
             {
                 btn_login.Enabled = true;
             }
@@ -46,9 +41,18 @@ namespace rasu_fnatik
         {
             Abrir();
 
-            string query = "select Password from Users where Login = " + textBox1.Text;
-            da = new SqlDataAdapter(query, conexion);
-            da.Fill(ds);
+            if (textBox1.Text.Length > 0)
+            {
+                string query = "select Password from Users where Login = " + textBox1.Text;
+                da = new SqlDataAdapter(query, conexion);
+                da.Fill(ds);
+            }
+            else
+            {
+                label3.Visible = true;
+
+            }
+            
 
             Cerrar();
             //logar y chapar
