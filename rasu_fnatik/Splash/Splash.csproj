@@ -82,5 +82,11 @@
   <ItemGroup>
     <Folder Include="Assets\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rasu_fnatik\rasu_fnatik.csproj">
+      <Project>{20e9ca58-fb86-40a5-bc77-96a69458eb25}</Project>
+      <Name>rasu_fnatik</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

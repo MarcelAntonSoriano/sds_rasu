@@ -43,7 +43,7 @@ namespace rasu_fnatik
 
             if (textBox1.Text.Length > 0)
             {
-                string query = "select Password from Users where Login = " + textBox1.Text;
+                string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.UserName FROM UserCategories INNER JOIN Users ON UserCategories.idUserCategory = Users.idUserCategory WHERE(Users.Login = '" + textBox1.Text + "') AND (Users.Password = '" + textBox2.Text + "')";
                 da = new SqlDataAdapter(query, conexion);
                 da.Fill(ds);
             }
@@ -52,11 +52,10 @@ namespace rasu_fnatik
                 label3.Visible = true;
 
             }
-            
 
             Cerrar();
-            //logar y chapar
-            if ((textBox2.Text).Equals(ds)) {
+            if (ds.Tables[0].Rows.Count==1)
+            {
                 frmMenu menu_metro = new frmMenu();
                 menu_metro.Show();
                 this.Close();
@@ -64,7 +63,18 @@ namespace rasu_fnatik
             else
             {
                 label3.Visible = true;
-            }            
+            }
+            //Cerrar();
+            ////logar y chapar
+            //if (textBox2.Text.Equals(ds.Tables)) {
+            //    frmMenu menu_metro = new frmMenu();
+            //    menu_metro.Show();
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    label3.Visible = true;
+            //}            
         }
         private void Abrir()
         {

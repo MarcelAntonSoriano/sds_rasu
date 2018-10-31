@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rasu_fnatik;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace Splash
         public frmSplash()
         {
             InitializeComponent();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            login login = new login();
+      
+            login.Show();
+            this.Close();
         }
     }
 }
