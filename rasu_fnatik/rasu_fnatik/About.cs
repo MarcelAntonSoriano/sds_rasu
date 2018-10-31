@@ -20,5 +20,6 @@ namespace rasu_fnatik
         {
             this.Close();
         }
+
     }
 }

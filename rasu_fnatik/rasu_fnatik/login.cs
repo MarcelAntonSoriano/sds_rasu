@@ -1,6 +1,4 @@
-﻿using Menu;
-using About;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +18,6 @@ namespace rasu_fnatik
         public SqlConnection conexion = new SqlConnection();
         DataSet ds = new DataSet();
         SqlDataAdapter da;
-        SqlDataReader dr;
 
         public login()
         {
@@ -58,25 +55,15 @@ namespace rasu_fnatik
             Cerrar();
             if (ds.Tables[0].Rows.Count==1)
             {
-                frmMenu menu_metro = new frmMenu();
+                Menu menu_metro = new Menu();
                 menu_metro.Show();
                 this.Close();
             }
             else
             {
                 label3.Visible = true;
-            }
-            //Cerrar();
-            ////logar y chapar
-            //if (textBox2.Text.Equals(ds.Tables)) {
-            //    frmMenu menu_metro = new frmMenu();
-            //    menu_metro.Show();
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    label3.Visible = true;
-            //}            
+            }          
+                     
         }
         private void Abrir()
         {

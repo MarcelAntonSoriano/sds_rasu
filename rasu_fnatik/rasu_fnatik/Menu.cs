@@ -16,5 +16,6 @@ namespace rasu_fnatik
         {
             InitializeComponent();
         }
+
     }
 }
