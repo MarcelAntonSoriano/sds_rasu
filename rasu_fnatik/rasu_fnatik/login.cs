@@ -1,4 +1,5 @@
 ﻿using Menu;
+using About;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,8 +87,8 @@ namespace rasu_fnatik
 
         private void btn_about_Click(object sender, EventArgs e)
         {
-            frmMenu menu_metro = new frmMenu();
-            menu_metro.Show();
+            frmAbout about = new frmAbout();
+            about.Show();
         }
     }
 }
