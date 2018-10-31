@@ -79,5 +79,11 @@ namespace rasu_fnatik
         {
             conexion.Close();
         }
+
+        private void btn_about_Click(object sender, EventArgs e)
+        {
+            frmMenu menu_metro = new frmMenu();
+            menu_metro.Show();
+        }
     }
 }

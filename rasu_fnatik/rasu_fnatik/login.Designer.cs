@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_about = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,11 +123,23 @@
             this.label3.Text = "Usuario y/o Contraseña ERRONEA";
             this.label3.Visible = false;
             // 
+            // btn_about
+            // 
+            this.btn_about.BackColor = System.Drawing.Color.Transparent;
+            this.btn_about.Location = new System.Drawing.Point(522, 12);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Size = new System.Drawing.Size(74, 20);
+            this.btn_about.TabIndex = 7;
+            this.btn_about.Text = "About";
+            this.btn_about.UseVisualStyleBackColor = false;
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 400);
+            this.Controls.Add(this.btn_about);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.label2);
@@ -153,6 +166,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_about;
     }
 }
 
