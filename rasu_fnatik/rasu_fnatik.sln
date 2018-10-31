@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Splash", "Splash\Splash.csproj", "{8D0D6174-BE95-46B4-BFFF-E80DAA3C8B78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "About", "About\About.csproj", "{9929035E-8D15-44BC-B7FB-3B17A78CA910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8D0D6174-BE95-46B4-BFFF-E80DAA3C8B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D0D6174-BE95-46B4-BFFF-E80DAA3C8B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D0D6174-BE95-46B4-BFFF-E80DAA3C8B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9929035E-8D15-44BC-B7FB-3B17A78CA910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9929035E-8D15-44BC-B7FB-3B17A78CA910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9929035E-8D15-44BC-B7FB-3B17A78CA910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9929035E-8D15-44BC-B7FB-3B17A78CA910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

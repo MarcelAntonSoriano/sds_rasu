@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20E9CA58-FB86-40A5-BC77-96A69458EB25}</ProjectGuid>
+    <ProjectGuid>{9929035E-8D15-44BC-B7FB-3B17A78CA910}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>rasu_fnatik</RootNamespace>
-    <AssemblyName>rasu_fnatik</AssemblyName>
+    <RootNamespace>About</RootNamespace>
+    <AssemblyName>About</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="login.cs">
+    <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,19 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\About\About.csproj">
-      <Project>{9929035e-8d15-44bc-b7fb-3b17a78ca910}</Project>
-      <Name>About</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Menu\Menu.csproj">
-      <Project>{97bd180e-a4c3-43c2-a4e4-cc67c093c048}</Project>
-      <Name>Menu</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
