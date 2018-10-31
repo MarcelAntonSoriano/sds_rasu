@@ -24,6 +24,7 @@ namespace rasu_fnatik
 
         public login()
         {
+            
             InitializeComponent();
         }
 
@@ -97,7 +98,7 @@ namespace rasu_fnatik
 
         private void btn_about_Click(object sender, EventArgs e)
         {
-            frmAbout about = new frmAbout();
+            About about = new About();
             about.Show();
         }
     }

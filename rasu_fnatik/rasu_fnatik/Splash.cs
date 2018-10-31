@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace rasu_fnatik
 {
-    public partial class Form1 : Form
+    public partial class Splash : Form
     {
-        public Form1()
+        public Splash()
         {
             InitializeComponent();
-        }
+        }             
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
+        private void timer1_Tick(object sender, EventArgs e)
+        {            
+            login login = new login();
+            login.Show();
+            this.Close();
         }
-
     }
 }

@@ -1,5 +1,4 @@
-﻿using rasu_fnatik;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Splash
+namespace rasu_fnatik
 {
-    public partial class frmSplash : Form
+    public partial class About : Form
     {
-        public frmSplash()
+        public About()
         {
             InitializeComponent();
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-            login login = new login();
-      
-            login.Show();
             this.Close();
         }
     }

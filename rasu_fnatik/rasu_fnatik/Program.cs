@@ -17,11 +17,12 @@ namespace rasu_fnatik
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var main = new login();
-            main.FormClosed += new FormClosedEventHandler(FormClosed);
-            main.Show();
-            Application.Run();
-    
+            Application.Run(new Splash());
+            Application.Run(new login());
+            Application.Run(new Menu());
+            Application.Run(new About());
+
+
         }
         static void FormClosed(object sender, FormClosedEventArgs e)
         {
