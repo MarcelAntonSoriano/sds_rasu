@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clase_bbdd_fnatik;
 
 namespace rasu_fnatik
 {
     public partial class Menu : Form
     {
+
+        DataSet ds2 = new DataSet();
+        Clase_BBDD bbdd = new Clase_BBDD();
+
         public Menu()
         {
             InitializeComponent();
@@ -29,7 +34,8 @@ namespace rasu_fnatik
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+           
         }
+
     }
 }
