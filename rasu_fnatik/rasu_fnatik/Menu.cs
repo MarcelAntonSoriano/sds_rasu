@@ -26,5 +26,10 @@ namespace rasu_fnatik
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
