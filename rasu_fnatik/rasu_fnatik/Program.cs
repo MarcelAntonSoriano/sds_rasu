@@ -18,19 +18,21 @@ namespace rasu_fnatik
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new Splash());
-            Application.Run(new About());
-            Application.Run(new login());            
-            Application.Run(new Menu());
-            
-            
+
+            var main = new login();
+            main.FormClosed += new FormClosedEventHandler(FormClosed);
+            main.Show();
+            Application.Run();
+
+
         }
-        /*static void FormClosed(object sender, FormClosedEventArgs e)
+        static void FormClosed(object sender, FormClosedEventArgs e)
         {
             ((Form)sender).FormClosed -= FormClosed;
             if (Application.OpenForms.Count == 0)
                 Application.ExitThread();
             else
                 Application.OpenForms[0].FormClosed += FormClosed;
-        }*/
+        }
     }
 }
