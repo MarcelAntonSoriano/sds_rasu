@@ -90,3 +90,7 @@ namespace rasu_fnatik
         }
     }
 }
+
+Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
+config.AppSettings.Settings.Add("idUsuari", idUser);
+           config.Save(ConfigurationSaveMode.Minimal);
