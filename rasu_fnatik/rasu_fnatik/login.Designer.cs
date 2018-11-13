@@ -60,7 +60,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 20);
             this.textBox1.TabIndex = 1;
+<<<<<<< HEAD:rasu_fnatik/rasu_fnatik/Form1.Designer.cs
+=======
             this.textBox1.TextChanged += new System.EventHandler(this.textBox);
+>>>>>>> 86368870e370a89970ad46fa37766f27e5e6ab50:rasu_fnatik/rasu_fnatik/login.Designer.cs
             // 
             // textBox2
             // 
