@@ -8,23 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Clase_bbdd_fnatik;
 
 
 namespace rasu_fnatik
 {
+    
     public partial class login : Form
     {
-        public string connectionString = "Server=W10B304PC21\\SQLEXPRESS;Database=SecureCore;User Id=FNATIK;Password=123";
-        public SqlConnection conexion = new SqlConnection();
-        DataSet ds = new DataSet();
-        SqlDataAdapter da;
+        public DataSet ds = new DataSet();
+        public Clase_BBDD bbdd = new Clase_BBDD();
 
         public login()
-        {
-            
+        {            
             InitializeComponent();
         }
-
         
         private void textBox(object sender, EventArgs e)
         {
@@ -36,15 +34,20 @@ namespace rasu_fnatik
             }
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        //public DataSet ObtenerDatosUsuario(String query)
+        //{
+
+        //}
+
+        public void btn_login_Click(object sender, EventArgs e)
         {
-            Abrir();
+            
 
             if (textBox1.Text.Length > 0)
             {
                 string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.UserName FROM UserCategories INNER JOIN Users ON UserCategories.idUserCategory = Users.idUserCategory WHERE(Users.Login = '" + textBox1.Text + "') AND (Users.Password = '" + textBox2.Text + "')";
-                da = new SqlDataAdapter(query, conexion);
-                da.Fill(ds);
+                ds = bbdd.PortarPerConsulta(query);
+                string UserId = (ds.Tables[0].Rows[1]).ToString();
             }
             else
             {
@@ -52,7 +55,6 @@ namespace rasu_fnatik
 
             }
 
-            Cerrar();
             if (ds.Tables[0].Rows.Count==1)
             {
                 Menu menu_metro = new Menu();
@@ -65,24 +67,6 @@ namespace rasu_fnatik
             }          
                      
         }
-        private void Abrir()
-        {
-            try
-            {
-                conexion.ConnectionString = connectionString;
-                conexion.Open();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al abrir la BD");
-            }
-        }
-
-        private void Cerrar()
-        {
-            conexion.Close();
-        }
-
         private void btn_about_Click(object sender, EventArgs e)
         {
             About about = new About();
@@ -90,3 +74,7 @@ namespace rasu_fnatik
         }
     }
 }
+
+Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
+config.AppSettings.Settings.Add("idUsuari", idUser);
+           config.Save(ConfigurationSaveMode.Minimal);

@@ -4,7 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+<<<<<<< HEAD
     <ProjectGuid>{374D27B1-C1A4-4CA3-B38D-F85C4E713725}</ProjectGuid>
+=======
+    <ProjectGuid>{873D41F3-C870-4CD3-BC09-08851804D3E4}</ProjectGuid>
+>>>>>>> 6dffa576a2f89e1441417ef6ec9b7bd942df714e
     <OutputType>WinExe</OutputType>
     <StartupObject>WindowsApp1.My.MyApplication</StartupObject>
     <RootNamespace>WindowsApp1</RootNamespace>
