@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rasu_fnatik
+namespace Prototipo_Login
 {
     public partial class Form1 : Form
     {
@@ -16,14 +16,5 @@ namespace rasu_fnatik
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
->>>>>>> 3116109bab3fdb857f2ee4087d64b37695a038ef
     }
 }
