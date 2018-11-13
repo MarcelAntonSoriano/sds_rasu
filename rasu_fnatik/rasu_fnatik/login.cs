@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Clase_bbdd_fnatik;
-
+using System.Configuration;
 
 namespace rasu_fnatik
 {
@@ -59,6 +59,10 @@ namespace rasu_fnatik
             {
                 Menu menu_metro = new Menu();
                 menu_metro.Show();
+                Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
+                config.AppSettings.Settings.Clear;
+                config.AppSettings.Settings.Add("idUsuari", idUser);
+                config.Save(ConfigurationSaveMode.Minimal);
                 this.Close();
             }
             else
@@ -74,7 +78,3 @@ namespace rasu_fnatik
         }
     }
 }
-
-Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
-config.AppSettings.Settings.Add("idUsuari", idUser);
-           config.Save(ConfigurationSaveMode.Minimal);
