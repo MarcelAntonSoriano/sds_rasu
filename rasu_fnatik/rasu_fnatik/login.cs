@@ -41,13 +41,16 @@ namespace rasu_fnatik
 
         public void btn_login_Click(object sender, EventArgs e)
         {
-            
+
+            string UserId = null;
+            string rangoId = null;
 
             if (textBox1.Text.Length > 0)
             {
-                string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.UserName FROM UserCategories INNER JOIN Users ON UserCategories.idUserCategory = Users.idUserCategory WHERE(Users.Login = '" + textBox1.Text + "') AND (Users.Password = '" + textBox2.Text + "')";
+                string query = "SELECT UserCategories.DescCategory, UserCategories.AccessLevel, Users.idUser, Users.UserName FROM UserCategories INNER JOIN Users ON UserCategories.idUserCategory = Users.idUserCategory WHERE(Users.Login = '" + textBox1.Text + "') AND (Users.Password = '" + textBox2.Text + "')";
                 ds = bbdd.PortarPerConsulta(query);
-                string UserId = (ds.Tables[0].Rows[1]).ToString();
+                UserId = (ds.Tables[0].Rows[2]).ToString();
+                rangoId = (ds.Tables[0].Rows[0]).ToString();
             }
             else
             {
@@ -60,8 +63,10 @@ namespace rasu_fnatik
                 Menu menu_metro = new Menu();
                 menu_metro.Show();
                 Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
-                config.AppSettings.Settings.Clear;
-                config.AppSettings.Settings.Add("idUsuari", idUser);
+                ConfigurationManager.AppSettings.Set("idUsuari", UserId);
+                ConfigurationManager.AppSettings.Add("idUsuari", UserId);
+                ConfigurationManager.AppSettings.Set("rango", rangoId);
+                ConfigurationManager.AppSettings.Add("rango", rangoId);
                 config.Save(ConfigurationSaveMode.Minimal);
                 this.Close();
             }

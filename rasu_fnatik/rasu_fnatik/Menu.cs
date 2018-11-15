@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
+using System.Configuration;
 
 namespace rasu_fnatik
 {
@@ -34,8 +35,8 @@ namespace rasu_fnatik
 
         private void Menu_Load(object sender, EventArgs e)
         {
-           
+            LabelName.Text = ConfigurationManager.AppSettings["idUsuari"].ToString();
+            LabelRank.Text = ConfigurationManager.AppSettings["rango"].ToString();
         }
-
     }
 }
