@@ -34,9 +34,7 @@ namespace rasu_fnatik
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            //aqui va cuando se carga buttons
-            LabelRank.Text = ;
-            
+           
         }
 
     }
