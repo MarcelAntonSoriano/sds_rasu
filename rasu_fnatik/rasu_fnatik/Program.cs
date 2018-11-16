@@ -23,8 +23,6 @@ namespace rasu_fnatik
             main.FormClosed += new FormClosedEventHandler(FormClosed);
             main.Show();
             Application.Run();
-
-
         }
         static void FormClosed(object sender, FormClosedEventArgs e)
         {
