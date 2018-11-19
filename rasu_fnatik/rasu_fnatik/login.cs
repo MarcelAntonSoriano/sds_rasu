@@ -64,10 +64,10 @@ namespace rasu_fnatik
             {
                 Menu menu_metro = new Menu();
                 menu_metro.Show();
-                Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
-                config.AppSettings.Settings.Add("idUsuari", UserId);
-                config.AppSettings.Settings.Add("rango", rangoId);
-                config.Save(ConfigurationSaveMode.Minimal);
+
+                ConfigurationManager.AppSettings.Set("idUsuari","hola");
+                ConfigurationManager.AppSettings.Set("rango", "adios");
+                
                 this.Close();
             }
             else
