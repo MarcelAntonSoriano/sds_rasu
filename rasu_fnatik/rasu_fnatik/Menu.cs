@@ -34,18 +34,19 @@ namespace rasu_fnatik
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            string rango = null;
             Clase_BBDD cb = new Clase_BBDD();
-            LabelName.Text = ConfigurationManager.AppSettings["idUsuari"].ToString();
-            LabelRank.Text = ConfigurationManager.AppSettings["rango"].ToString();
+            LabelName.Text = "Hola " + ConfigurationManager.AppSettings["idUsuari"].ToString();
+            rango = ConfigurationManager.AppSettings["rango"].ToString();
 
-            string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser FROM UserCategories, Users where UserCategories.idUserCategory = Users.idUserCategory AND idUser = " + int.Parse(ConfigurationManager.AppSettings["idUsuari"].ToString()) ;
+            string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser FROM UserCategories, Users where UserCategories.idUserCategory = Users.idUserCategory AND idUser = " + LabelName.Text ;
             DataSet dts;
             dts = cb.PortarPerConsulta(query);
 
-            query = "select * from MenuOptions where AccessLevel=" + dts.Tables[0].Rows[0]["AccessLevel"];
+            query = "select * from MenuOptions where nivel_acces <= " + dts.Tables[0].Rows[0]["AccessLevel"];
             ds = cb.PortarPerConsulta(query);
-            MessageBox.Show("HOLA");
+            
+
         }
     }
 }
