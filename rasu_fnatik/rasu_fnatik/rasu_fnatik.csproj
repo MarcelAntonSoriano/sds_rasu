@@ -111,9 +111,15 @@
     <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\..\..\..\source\repos\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj">
       <Project>{fbe3cf6b-da85-4428-bbcf-34f8deacb897}</Project>
       <Name>Clase_bbdd_fnatik</Name>
+=======
+    <ProjectReference Include="..\CustomControlMenu\CustomControlMenu.csproj">
+      <Project>{26B830E8-247A-4528-8E99-1C639C132EB6}</Project>
+      <Name>CustomControlMenu</Name>
+>>>>>>> parent of 10bb8ba... Revert "baia baia"
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
