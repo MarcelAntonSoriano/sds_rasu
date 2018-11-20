@@ -38,7 +38,14 @@
       <HintPath>..\DLL\Clase_bbdd_fnatik.dll</HintPath>
     </Reference>
     <Reference Include="Control_FNATIK">
+<<<<<<< HEAD
       <HintPath>..\DLL\Control_FNATIK.dll</HintPath>
+=======
+      <HintPath>..\..\..\..\..\Desktop\Controles\ControlTextBox_FNATIK\Control_FNATIK\bin\Debug\Control_FNATIK.dll</HintPath>
+    </Reference>
+    <Reference Include="SdSComboFK">
+      <HintPath>..\..\..\..\..\Desktop\Controles\ComboFK_FNATIK\SdSComboFK\SdSComboFK\bin\Debug\SdSComboFK.dll</HintPath>
+>>>>>>> parent of 5a49090... Revert "dhjtfjtfjk"
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
