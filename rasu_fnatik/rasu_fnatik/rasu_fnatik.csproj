@@ -33,12 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Clase_bbdd_fnatik, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLL\Clase_bbdd_fnatik.dll</HintPath>
-    </Reference>
-    <Reference Include="Control_FNATIK">
-      <HintPath>..\DLL\Control_FNATIK.dll</HintPath>
+    <Reference Include="Clase_bbdd_fnatik">
+      <HintPath>..\Clase_bbdd_fnatik.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

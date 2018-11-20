@@ -56,17 +56,20 @@
             // LabelRank
             // 
             this.LabelRank.Name = "LabelRank";
-            this.LabelRank.Size = new System.Drawing.Size(0, 22);
+            this.LabelRank.Size = new System.Drawing.Size(86, 22);
+            this.LabelRank.Text = "toolStripLabel1";
             // 
             // LabelName
             // 
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(0, 22);
+            this.LabelName.Size = new System.Drawing.Size(86, 22);
+            this.LabelName.Text = "toolStripLabel2";
             // 
             // LabelTimeLeft
             // 
             this.LabelTimeLeft.Name = "LabelTimeLeft";
-            this.LabelTimeLeft.Size = new System.Drawing.Size(0, 22);
+            this.LabelTimeLeft.Size = new System.Drawing.Size(86, 22);
+            this.LabelTimeLeft.Text = "toolStripLabel3";
             // 
             // BtnClose
             // 
@@ -117,11 +120,11 @@
 
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel LabelRank;
+        private System.Windows.Forms.ToolStripLabel LabelName;
         private System.Windows.Forms.ToolStripLabel LabelTimeLeft;
         private System.Windows.Forms.ToolStripButton BtnClose;
         private System.Windows.Forms.ToolStripButton BtnMinimize;
-        public System.Windows.Forms.ToolStripLabel LabelName;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        public System.Windows.Forms.ToolStripLabel LabelRank;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
