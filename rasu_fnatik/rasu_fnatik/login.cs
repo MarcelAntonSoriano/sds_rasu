@@ -41,6 +41,7 @@ namespace rasu_fnatik
 
         public void btn_login_Click(object sender, EventArgs e)
         {
+
             string UserId = null;
             string rangoId = null;
 
@@ -51,10 +52,12 @@ namespace rasu_fnatik
 
                 rangoId = (ds.Tables[0].Rows[0][0]).ToString();
                 UserId = (ds.Tables[0].Rows[0][2]).ToString();
+                
             }
             else
             {
                 label3.Visible = true;
+
             }
 
             if (ds.Tables[0].Rows.Count==1)
@@ -64,12 +67,15 @@ namespace rasu_fnatik
                 Menu menu_metro = new Menu();
                 menu_metro.Show();
 
+                
+                
                 this.Close();
             }
             else
             {
                 label3.Visible = true;
-            }                        
+            }          
+                     
         }
         private void btn_about_Click(object sender, EventArgs e)
         {
