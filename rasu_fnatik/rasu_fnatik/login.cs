@@ -43,7 +43,6 @@ namespace rasu_fnatik
         {
 
             string UserId = null;
-            string rangoId = null;
 
             if (textBox1.Text.Length > 0)
             {
