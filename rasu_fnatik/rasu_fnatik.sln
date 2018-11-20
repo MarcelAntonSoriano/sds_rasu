@@ -5,12 +5,6 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rasu_fnatik", "rasu_fnatik\rasu_fnatik.csproj", "{20E9CA58-FB86-40A5-BC77-96A69458EB25}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_bbdd_fnatik", "..\..\..\source\repos\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj", "{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlMenu", "CustomControlMenu\CustomControlMenu.csproj", "{26B830E8-247A-4528-8E99-1C639C132EB6}"
->>>>>>> parent of 10bb8ba... Revert "baia baia"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,17 +15,6 @@ Global
 		{20E9CA58-FB86-40A5-BC77-96A69458EB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E9CA58-FB86-40A5-BC77-96A69458EB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E9CA58-FB86-40A5-BC77-96A69458EB25}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-		{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
-		{26B830E8-247A-4528-8E99-1C639C132EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26B830E8-247A-4528-8E99-1C639C132EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26B830E8-247A-4528-8E99-1C639C132EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26B830E8-247A-4528-8E99-1C639C132EB6}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> parent of 10bb8ba... Revert "baia baia"
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
