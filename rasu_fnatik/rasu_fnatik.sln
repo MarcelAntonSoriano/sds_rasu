@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rasu_fnatik", "rasu_fnatik\rasu_fnatik.csproj", "{20E9CA58-FB86-40A5-BC77-96A69458EB25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlButton", "CustomControlButton\CustomControlButton.csproj", "{CA4A213D-5FF3-4D05-A221-FED09C34362B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{20E9CA58-FB86-40A5-BC77-96A69458EB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E9CA58-FB86-40A5-BC77-96A69458EB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E9CA58-FB86-40A5-BC77-96A69458EB25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4A213D-5FF3-4D05-A221-FED09C34362B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4A213D-5FF3-4D05-A221-FED09C34362B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4A213D-5FF3-4D05-A221-FED09C34362B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4A213D-5FF3-4D05-A221-FED09C34362B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
