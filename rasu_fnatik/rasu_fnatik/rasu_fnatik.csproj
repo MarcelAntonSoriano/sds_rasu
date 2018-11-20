@@ -113,5 +113,11 @@
   <ItemGroup>
     <Folder Include="Assets\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControlMenu\CustomControlMenu.csproj">
+      <Project>{26B830E8-247A-4528-8E99-1C639C132EB6}</Project>
+      <Name>CustomControlMenu</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
