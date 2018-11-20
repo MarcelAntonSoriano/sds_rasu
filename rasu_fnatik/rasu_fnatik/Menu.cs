@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 using System.Configuration;
+using System.Reflection;
 
 namespace rasu_fnatik
 {
@@ -58,5 +59,18 @@ namespace rasu_fnatik
             
 
         }
+//TODO ESTO ES EL REFLECTION
+        private void AbrirBotones(object sender, EventArgs e)
+        {
+            Assembly ensamblat = Assembly.LoadFrom(nom_dll);
+            Object dllBD;
+            Type tipus;
+
+            tipus = ensamblat.GetType(nom_form);
+            dllBD = Activator.CreateInstance(tipus);
+
+            ((Form)dllBD).Show();
+        }
+ // FIN DE LA TEORIA, HAY QUE MODIFICAR LOS CAMPOS AJUSTANDOLO A NUESTRO PROYECTO
     }
 }

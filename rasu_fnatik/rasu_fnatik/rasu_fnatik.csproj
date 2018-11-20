@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Clase_bbdd_fnatik">
-      <HintPath>..\Clase_bbdd_fnatik.dll</HintPath>
+      <HintPath>..\DLL\Clase_bbdd_fnatik.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -112,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControlButton\CustomControlButton.csproj">
+      <Project>{CA4A213D-5FF3-4D05-A221-FED09C34362B}</Project>
+      <Name>CustomControlButton</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
