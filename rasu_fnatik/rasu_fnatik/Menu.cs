@@ -16,7 +16,8 @@ namespace rasu_fnatik
 {
     public partial class Menu : Form
     {
-
+        private Timer timer1;
+        private int countTimer = 1800;
         DataSet ds = new DataSet();
 
         public Menu()
@@ -36,14 +37,17 @@ namespace rasu_fnatik
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            timer1 = new Timer();
+            timer1.Tick += new EventHandler(Timer1_Tick);
+            timer1.Interval = 1000;
+            timer1.Start();
+
             Clase_BBDD cb = new Clase_BBDD();
             DataSet dts;
-            string rango = null;
             string id = null;
             string query = null;
 
             id = ConfigurationManager.AppSettings["idUsuari"].ToString();
-            rango = ConfigurationManager.AppSettings["rango"].ToString();
 
             query = "select U.UserName, UR.DescRank from Users U, UserRanks UR where U.idUserRank = UR.idUserRank and U.idUser = " + id;
             dts = cb.PortarPerConsulta(query);
@@ -66,14 +70,25 @@ namespace rasu_fnatik
             {
                 us[i] = new UserControl1();
                 us[i].Name = "Button" + i;
-                us[i].LblText = ds.Tables[0].Rows[4][i].ToString();                
+                us[i].LblText = ds.Tables[0].Rows[i][4].ToString();                
             }
 
             for (int i = 0; i < n; i++)
             {
-                Controls.Add(us[i]);
+                flowLayoutPanel1.Controls.Add(us[i]);
             }
 
+        }
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            countTimer--;
+            if (countTimer == 0)
+            {
+                timer1.Stop();
+                MessageBox.Show("Time is over!");
+                this.Close();
+            }
+            LabelTimeLeft.Text = "      Time Left : " + countTimer / 60 + ":" + ((countTimer % 60) >= 10 ? (countTimer % 60).ToString() : "0" + countTimer % 60);
         }
     }
 }

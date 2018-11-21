@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Clase_bbdd_fnatik, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLL\Clase_bbdd_fnatik.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -115,6 +111,10 @@
     <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\repos\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj">
+      <Project>{fbe3cf6b-da85-4428-bbcf-34f8deacb897}</Project>
+      <Name>Clase_bbdd_fnatik</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CustomControlButton\CustomControlButton.csproj">
       <Project>{CA4A213D-5FF3-4D05-A221-FED09C34362B}</Project>
       <Name>CustomControlButton</Name>

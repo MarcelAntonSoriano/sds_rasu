@@ -43,7 +43,6 @@ namespace rasu_fnatik
         {
 
             string UserId = null;
-            string rangoId = null;
 
             if (textBox1.Text.Length > 0)
             {
@@ -51,7 +50,7 @@ namespace rasu_fnatik
                 ds = bbdd.PortarPerConsulta(query);
 
                 
-                UserId = (ds.Tables[0].Columns[2]).ToString();
+                UserId = (ds.Tables[0].Rows[0][2]).ToString();
                 
             }
             else
