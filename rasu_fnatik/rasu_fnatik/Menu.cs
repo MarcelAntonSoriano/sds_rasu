@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 using System.Configuration;
 using System.Reflection;
+using CustomControlButton;
 
 namespace rasu_fnatik
 {
@@ -56,7 +57,22 @@ namespace rasu_fnatik
 
             query = "select * from MenuOptions where nivel_acces <= " + dts.Tables[0].Rows[0]["AccessLevel"];
             ds = cb.PortarPerConsulta(query);
-            
+
+            int n = ds.Tables[0].Rows.Count;
+
+            UserControl1[] us = new UserControl1[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                us[i] = new UserControl1();
+                us[i].Name = "Button" + i;
+                us[i].LblText = ds.Tables[0].Rows[4][i].ToString();                
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                Controls.Add(us[i]);
+            }
 
         }
     }

@@ -36,6 +36,7 @@
             this.BtnClose = new System.Windows.Forms.ToolStripButton();
             this.BtnMinimize = new System.Windows.Forms.ToolStripButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +101,10 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 386);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,5 +131,6 @@
         private System.Windows.Forms.ToolStripButton BtnClose;
         private System.Windows.Forms.ToolStripButton BtnMinimize;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
