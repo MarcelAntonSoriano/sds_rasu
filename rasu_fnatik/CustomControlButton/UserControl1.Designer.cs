@@ -33,12 +33,15 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gold;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 57);
+            this.button1.Size = new System.Drawing.Size(183, 86);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // UserControl1
             // 
@@ -46,7 +49,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button1);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(121, 57);
+            this.Size = new System.Drawing.Size(183, 86);
             this.ResumeLayout(false);
 
         }

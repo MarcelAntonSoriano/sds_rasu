@@ -37,18 +37,18 @@ namespace rasu_fnatik
         {
             Clase_BBDD cb = new Clase_BBDD();
             DataSet dts;
+            string rango = null;
             string id = null;
             string query = null;
 
             id = ConfigurationManager.AppSettings["idUsuari"].ToString();
-           
+            rango = ConfigurationManager.AppSettings["rango"].ToString();
 
             query = "select U.UserName, UR.DescRank from Users U, UserRanks UR where U.idUserRank = UR.idUserRank and U.idUser = " + id;
             dts = cb.PortarPerConsulta(query);
 
             LabelName.Text = "Name :   " + (dts.Tables[0].Rows[0][0]).ToString();
             LabelRank.Text = "Rank :   " + (dts.Tables[0].Rows[0][1]).ToString();
-            LabelTimeLeft.Text = "";
 
             query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser FROM UserCategories, Users where UserCategories.idUserCategory = Users.idUserCategory AND idUser = " + id ;
             dts = new DataSet();
@@ -59,18 +59,5 @@ namespace rasu_fnatik
             
 
         }
-//TODO ESTO ES EL REFLECTION
-        private void AbrirBotones(object sender, EventArgs e)
-        {
-            Assembly ensamblat = Assembly.LoadFrom(nom_dll);
-            Object dllBD;
-            Type tipus;
-
-            tipus = ensamblat.GetType(nom_form);
-            dllBD = Activator.CreateInstance(tipus);
-
-            ((Form)dllBD).Show();
-        }
- // FIN DE LA TEORIA, HAY QUE MODIFICAR LOS CAMPOS AJUSTANDOLO A NUESTRO PROYECTO
     }
 }
