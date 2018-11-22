@@ -11,6 +11,7 @@ using Clase_bbdd_fnatik;
 using System.Configuration;
 using System.Reflection;
 using CustomControlButton;
+using System.Media;
 
 namespace rasu_fnatik
 {
@@ -89,6 +90,18 @@ namespace rasu_fnatik
                 this.Close();
             }
             LabelTimeLeft.Text = "      Time Left : " + countTimer / 60 + ":" + ((countTimer % 60) >= 10 ? (countTimer % 60).ToString() : "0" + countTimer % 60);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            SoundPlayer sp = new SoundPlayer
+            {
+                SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Megalovania.wav"
+            };
+
+            sp.Play();
+            sp.PlayLooping();            
+            
         }
     }
 }
