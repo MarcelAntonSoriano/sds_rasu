@@ -71,7 +71,9 @@ namespace rasu_fnatik
             {
                 us[i] = new UserControl1();
                 us[i].Name = "Button" + i;
-                us[i].LblText = ds.Tables[0].Rows[i][4].ToString();                
+                us[i].LblText = ds.Tables[0].Rows[i][4].ToString();
+                us[i].NameDLL = ds.Tables[0].Rows[i][1].ToString();
+                us[i].NameForm = ds.Tables[0].Rows[i][2].ToString();
             }
 
             for (int i = 0; i < n; i++)
@@ -103,5 +105,8 @@ namespace rasu_fnatik
             sp.PlayLooping();            
             
         }
+
+
+
     }
 }

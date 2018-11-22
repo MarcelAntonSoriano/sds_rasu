@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlButton", "Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_bbdd_fnatik", "..\..\..\source\repos\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj", "{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestion_usuarios", "gestion_usuarios\gestion_usuarios\gestion_usuarios.csproj", "{B0CFD9B3-E7DF-4BF3-8A5F-26182D1B96C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_Base", "Pruevas2\Pruevas2\Form_Base.csproj", "{C6378C78-7A9B-4978-877B-CB48B986CD4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_FNATIK", "ControlTextBox_FNATIK\Control_FNATIK\Control_FNATIK.csproj", "{05220585-359F-4068-9F85-2F483005FF54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBE3CF6B-DA85-4428-BBCF-34F8DEACB897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0CFD9B3-E7DF-4BF3-8A5F-26182D1B96C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0CFD9B3-E7DF-4BF3-8A5F-26182D1B96C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0CFD9B3-E7DF-4BF3-8A5F-26182D1B96C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0CFD9B3-E7DF-4BF3-8A5F-26182D1B96C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6378C78-7A9B-4978-877B-CB48B986CD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6378C78-7A9B-4978-877B-CB48B986CD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6378C78-7A9B-4978-877B-CB48B986CD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6378C78-7A9B-4978-877B-CB48B986CD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05220585-359F-4068-9F85-2F483005FF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05220585-359F-4068-9F85-2F483005FF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05220585-359F-4068-9F85-2F483005FF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05220585-359F-4068-9F85-2F483005FF54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

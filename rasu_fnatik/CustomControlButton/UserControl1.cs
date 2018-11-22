@@ -56,5 +56,7 @@ namespace CustomControlButton
             ((Form)dllBD).Show();
             button1.Text = LblText;
         }
+
+        
     }
 }
