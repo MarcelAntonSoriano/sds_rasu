@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 
+
 namespace CustomControlButton
 {
     public partial class UserControl1: UserControl
@@ -44,6 +45,13 @@ namespace CustomControlButton
                 set { _NameForm = value; }
             }
 
+            private string _NameTable;
+            public string NameTable
+            {
+                get { return _NameTable; }
+                set { _NameTable = value; }
+            }
+
         private void ObreForm(object sender, EventArgs e)
         {
             Assembly ensamblat = Assembly.LoadFrom(NameDLL);
@@ -52,9 +60,12 @@ namespace CustomControlButton
 
             tipus = ensamblat.GetType(NameForm);
             dllBD = Activator.CreateInstance(tipus);
+            
 
+            
             ((Form)dllBD).Show();
             button1.Text = LblText;
+
         }
 
         

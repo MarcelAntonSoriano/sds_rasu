@@ -60,11 +60,5 @@
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\repos\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj">
-      <Project>{fbe3cf6b-da85-4428-bbcf-34f8deacb897}</Project>
-      <Name>Clase_bbdd_fnatik</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

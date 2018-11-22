@@ -21,7 +21,6 @@ namespace gestion_usuarios
 
         private void Form_usuarios_Load(object sender, EventArgs e)
         {
-            this.tabla = "Users";
 
             Clase_BBDD cb = new Clase_BBDD();
             DataSet ds = new DataSet();

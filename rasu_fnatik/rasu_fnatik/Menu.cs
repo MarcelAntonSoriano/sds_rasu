@@ -74,6 +74,7 @@ namespace rasu_fnatik
                 us[i].LblText = ds.Tables[0].Rows[i][4].ToString();
                 us[i].NameDLL = ds.Tables[0].Rows[i][1].ToString();
                 us[i].NameForm = ds.Tables[0].Rows[i][2].ToString();
+                us[i].NameTable = ds.Tables[0].Rows[i][7].ToString();
             }
 
             for (int i = 0; i < n; i++)

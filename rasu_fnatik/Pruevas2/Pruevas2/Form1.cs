@@ -9,21 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Control_FNATIK;
 using Clase_bbdd_fnatik;
+using CustomControlButton;
 
 namespace Form_Base
-
 {
     public partial class Form1 : Form
     {
         DataSet ds;
         Clase_BBDD bd = new Clase_BBDD();
         bool IsNew = false;
+        public string tabla = null;
         DataRow dr;
-        public string tabla = "UserRanks";
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -77,18 +76,19 @@ namespace Form_Base
         {
             dr = ds.Tables[0].NewRow();
             IsNew = true;
-
+            int count = 0;
             foreach (Control ctr in this.Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
                 {
                    ((ControlTextBox)ctr).DataBindings.Clear();
                     ctr.Text = "";
-                   
+                    if(count==0)controlTextBox1.Focus();                   
+                    count++;
                 }
             }
 
-            controlTextBox1.Focus();       
+                
         }
 
         private void controlTextBox3_Leave(object sender, EventArgs e)

@@ -92,6 +92,10 @@
       <Project>{05220585-359f-4068-9f85-2f483005ff54}</Project>
       <Name>Control_FNATIK</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\CustomControlButton\CustomControlButton.csproj">
+      <Project>{ca4a213d-5ff3-4d05-a221-fed09c34362b}</Project>
+      <Name>CustomControlButton</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
