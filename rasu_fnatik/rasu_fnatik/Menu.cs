@@ -38,50 +38,54 @@ namespace rasu_fnatik
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            TimerMaker();
+            ToolStripNamer();
+            UserControlMaker();
+        }
+
+        private void TimerMaker()
+        {
             timer1 = new Timer();
             timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Interval = 1000;
             timer1.Start();
-
+        }
+        private void ToolStripNamer()
+        {           
+            
             Clase_BBDD cb = new Clase_BBDD();
-            DataSet dts;
-            string id = null;
-            string query = null;
-
-            id = ConfigurationManager.AppSettings["idUsuari"].ToString();
-
-            query = "select U.UserName, UR.DescRank from Users U, UserRanks UR where U.idUserRank = UR.idUserRank and U.idUser = " + id;
-            dts = cb.PortarPerConsulta(query);
+            string id = ConfigurationManager.AppSettings["idUsuari"].ToString();
+            string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser FROM UserCategories, Users where UserCategories.idUserCategory = Users.idUserCategory AND idUser = " + id;
+            DataSet dts = new DataSet();
+            dts = cb.PortarPerConsulta(query);           
 
             LabelName.Text = "Name :   " + (dts.Tables[0].Rows[0][0]).ToString();
             LabelRank.Text = "Rank :   " + (dts.Tables[0].Rows[0][1]).ToString();
 
-            query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser FROM UserCategories, Users where UserCategories.idUserCategory = Users.idUserCategory AND idUser = " + id ;
-            dts = new DataSet();
+            query = "select U.UserName, UR.DescRank from Users U, UserRanks UR where U.idUserRank = UR.idUserRank and U.idUser = " + id;
             dts = cb.PortarPerConsulta(query);
 
             query = "select * from MenuOptions where nivel_acces <= " + dts.Tables[0].Rows[0]["AccessLevel"];
             ds = cb.PortarPerConsulta(query);
+        }
 
+        private void UserControlMaker()
+        {
             int n = ds.Tables[0].Rows.Count;
-
             UserControl1[] us = new UserControl1[n];
-
             for (int i = 0; i < n; i++)
             {
                 us[i] = new UserControl1();
                 us[i].Name = "Button" + i;
-                us[i].LblText = ds.Tables[0].Rows[i][4].ToString();
-                us[i].NameDLL = ds.Tables[0].Rows[i][1].ToString();
-                us[i].NameForm = ds.Tables[0].Rows[i][2].ToString();
-                us[i].NameTable = ds.Tables[0].Rows[i][7].ToString();
+                us[i].LblText = ds.Tables[0].Rows[i]["texto"].ToString();
+                us[i].NameDLL = ds.Tables[0].Rows[i]["nom_dll"].ToString();
+                us[i].NameForm = ds.Tables[0].Rows[i]["nom_form"].ToString();
             }
 
             for (int i = 0; i < n; i++)
             {
                 flowLayoutPanel1.Controls.Add(us[i]);
             }
-
         }
         private void Timer1_Tick(object sender, EventArgs e)
         {
@@ -103,11 +107,8 @@ namespace rasu_fnatik
             };
 
             sp.Play();
-            sp.PlayLooping();            
+            sp.PlayLooping();           
             
         }
-
-
-
     }
 }

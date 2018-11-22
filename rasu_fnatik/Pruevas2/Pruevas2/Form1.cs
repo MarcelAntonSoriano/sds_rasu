@@ -18,21 +18,24 @@ namespace Form_Base
         DataSet ds;
         Clase_BBDD bd = new Clase_BBDD();
         bool IsNew = false;
-        public string tabla = null;
+        public string tabla { get; set; }
         DataRow dr;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
-            ds = new DataSet();
+            if (tabla != null)
+            {
+                ds = new DataSet();
 
-            ds = bd.PortarTaula(tabla);
-            dataGridView1.DataSource = ds.Tables[0];
-            PortarDades();
+                ds = bd.PortarTaula(tabla);
+                dataGridView1.DataSource = ds.Tables[0];
+                PortarDades();
+            }
         }
 
         public void PortarDades()

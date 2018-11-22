@@ -26,9 +26,9 @@ namespace gestion_usuarios
             DataSet ds = new DataSet();
             DataGridView dataGridView1 = new DataGridView();
 
-            ds = cb.PortarTaula(tabla);
-            dataGridView1.DataSource = ds.Tables[0];
-            PortarDades();
+            tabla = "Users";
+            Form1_Load(sender, e);
+            
         }
     }
 }

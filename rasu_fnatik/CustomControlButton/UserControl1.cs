@@ -44,13 +44,7 @@ namespace CustomControlButton
                 get { return _NameForm; }
                 set { _NameForm = value; }
             }
-
-            private string _NameTable;
-            public string NameTable
-            {
-                get { return _NameTable; }
-                set { _NameTable = value; }
-            }
+            
 
         private void ObreForm(object sender, EventArgs e)
         {
@@ -59,15 +53,12 @@ namespace CustomControlButton
             Type tipus;
 
             tipus = ensamblat.GetType(NameForm);
-            dllBD = Activator.CreateInstance(tipus);
-            
+            dllBD = Activator.CreateInstance(tipus);       
 
             
             ((Form)dllBD).Show();
             button1.Text = LblText;
 
-        }
-
-        
+        }        
     }
 }
