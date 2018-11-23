@@ -34,11 +34,6 @@ namespace rasu_fnatik
             }
         }
 
-        //public DataSet ObtenerDatosUsuario(String query)
-        //{
-
-        //}
-
         public void btn_login_Click(object sender, EventArgs e)
         {
 

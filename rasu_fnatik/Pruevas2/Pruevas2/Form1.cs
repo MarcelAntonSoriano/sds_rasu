@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Control_FNATIK;
 using Clase_bbdd_fnatik;
@@ -15,7 +9,7 @@ namespace Form_Base
 {
     public partial class Form1 : Form
     {
-        DataSet ds;
+        DataSet ds = new DataSet();
         Clase_BBDD bd = new Clase_BBDD();
         bool IsNew = false;
         public string tabla { get; set; }
@@ -30,10 +24,9 @@ namespace Form_Base
             if (DesignMode) return;
             if (tabla != null)
             {
-                ds = new DataSet();
-
                 ds = bd.PortarTaula(tabla);
                 dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[0].Visible = false;
                 PortarDades();
             }
         }
@@ -49,7 +42,7 @@ namespace Form_Base
                     ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
                 }
             }
-            dataGridView1.DataSource = ds.Tables[0];
+            //dataGridView1.DataSource = ds.Tables[0];
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -65,14 +58,10 @@ namespace Form_Base
                         dr[ctr1.Campo] = ctr.Text;
                     }
                 }
-
-
                 ds.Tables[0].Rows.Add(dr);
-          
             }
             bd.Actualitzar(ds, "select * from " + tabla);
             IsNew = false;
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,12 +75,10 @@ namespace Form_Base
                 {
                    ((ControlTextBox)ctr).DataBindings.Clear();
                     ctr.Text = "";
-                    if(count==0)controlTextBox1.Focus();                   
+                    //if(count==0) controlTextBox1.Focus();                   
                     count++;
                 }
-            }
-
-                
+            } 
         }
 
         private void controlTextBox3_Leave(object sender, EventArgs e)

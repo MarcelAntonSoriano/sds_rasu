@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{438D49FC-0571-47BB-AE80-7D711E1AD516}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gestion_pantallas</RootNamespace>
+    <AssemblyName>gestion_pantallas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_pantallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_pantallas.Designer.cs">
+      <DependentUpon>Form_pantallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj">
+      <Project>{fbe3cf6b-da85-4428-bbcf-34f8deacb897}</Project>
+      <Name>Clase_bbdd_fnatik</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlTextBox_FNATIK\Control_FNATIK\Control_FNATIK.csproj">
+      <Project>{05220585-359f-4068-9f85-2f483005ff54}</Project>
+      <Name>Control_FNATIK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomControlButton\CustomControlButton.csproj">
+      <Project>{ca4a213d-5ff3-4d05-a221-fed09c34362b}</Project>
+      <Name>CustomControlButton</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pruevas2\Pruevas2\Form_Base.csproj">
+      <Project>{c6378c78-7a9b-4978-877b-cb48b986cd4c}</Project>
+      <Name>Form_Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_pantallas.resx">
+      <DependentUpon>Form_pantallas.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

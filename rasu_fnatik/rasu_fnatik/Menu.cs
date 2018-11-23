@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 using System.Configuration;
@@ -55,17 +49,13 @@ namespace rasu_fnatik
             
             Clase_BBDD cb = new Clase_BBDD();
             string id = ConfigurationManager.AppSettings["idUsuari"].ToString();
-            string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser FROM UserCategories, Users where UserCategories.idUserCategory = Users.idUserCategory AND idUser = " + id;
-            DataSet dts = new DataSet();
-            dts = cb.PortarPerConsulta(query);           
+            string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser, Users.UserName, UserRanks.DescRank FROM UserCategories, Users, UserRanks where UserCategories.idUserCategory = Users.idUserCategory AND Users.idUserRank = UserRanks.idUserRank AND idUser = " + id;
+            ds = cb.PortarPerConsulta(query);           
 
-            LabelName.Text = "Name :   " + (dts.Tables[0].Rows[0][0]).ToString();
-            LabelRank.Text = "Rank :   " + (dts.Tables[0].Rows[0][1]).ToString();
+            LabelName.Text = "    Name : " + (ds.Tables[0].Rows[0][3]).ToString();
+            LabelRank.Text = "Rank : " + (ds.Tables[0].Rows[0][4]).ToString();
 
-            query = "select U.UserName, UR.DescRank from Users U, UserRanks UR where U.idUserRank = UR.idUserRank and U.idUser = " + id;
-            dts = cb.PortarPerConsulta(query);
-
-            query = "select * from MenuOptions where nivel_acces <= " + dts.Tables[0].Rows[0]["AccessLevel"];
+            query = "select * from MenuOptions where nivel_acces <= " + ds.Tables[0].Rows[0]["AccessLevel"];
             ds = cb.PortarPerConsulta(query);
         }
 
@@ -80,13 +70,10 @@ namespace rasu_fnatik
                 us[i].LblText = ds.Tables[0].Rows[i]["texto"].ToString();
                 us[i].NameDLL = ds.Tables[0].Rows[i]["nom_dll"].ToString();
                 us[i].NameForm = ds.Tables[0].Rows[i]["nom_form"].ToString();
-            }
-
-            for (int i = 0; i < n; i++)
-            {
                 flowLayoutPanel1.Controls.Add(us[i]);
             }
         }
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
             countTimer--;
@@ -105,10 +92,8 @@ namespace rasu_fnatik
             {
                 SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Megalovania.wav"
             };
-
             sp.Play();
-            sp.PlayLooping();           
-            
+            sp.PlayLooping();                
         }
     }
 }

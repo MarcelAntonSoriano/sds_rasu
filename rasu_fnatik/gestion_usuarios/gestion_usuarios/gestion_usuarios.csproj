@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SdSComboFK">
+      <HintPath>..\..\..\..\Controles\ComboFK_FNATIK\SdSComboFK\SdSComboFK\bin\Debug\SdSComboFK.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -57,7 +60,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\source\repos\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj">
+    <ProjectReference Include="..\..\Clase_bbdd_fnatik\Clase_bbdd_fnatik\Clase_bbdd_fnatik.csproj">
       <Project>{fbe3cf6b-da85-4428-bbcf-34f8deacb897}</Project>
       <Name>Clase_bbdd_fnatik</Name>
     </ProjectReference>
