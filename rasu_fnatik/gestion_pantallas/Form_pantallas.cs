@@ -17,5 +17,11 @@ namespace gestion_pantallas
             InitializeComponent();
 
         }
+
+        private void Form_pantallas_Load(object sender, EventArgs e)
+        {
+            tabla = "MenuOptions";
+            Form1_Load(sender, e);
+        }
     }
 }
