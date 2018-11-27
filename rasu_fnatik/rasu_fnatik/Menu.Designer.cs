@@ -103,9 +103,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(124, 70);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(44, 70);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(596, 164);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(711, 298);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // pictureBox1

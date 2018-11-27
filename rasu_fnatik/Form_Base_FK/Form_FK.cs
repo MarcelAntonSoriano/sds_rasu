@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Form_Base_FK
 {
-    public partial class Form_FK : Form_Base.Form1
+    public partial class Form_FK : Form
     {
         public Form_FK()
         {
             InitializeComponent();
+        }
+
+        private void Form_FK_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

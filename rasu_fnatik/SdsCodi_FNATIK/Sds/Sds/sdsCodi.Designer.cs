@@ -48,6 +48,7 @@
             this.TextCode.Name = "TextCode";
             this.TextCode.Size = new System.Drawing.Size(100, 20);
             this.TextCode.TabIndex = 1;
+            this.TextCode.Leave += new System.EventHandler(this.TextCode_Leave);
             this.TextCode.Validating += new System.ComponentModel.CancelEventHandler(this.TextCode_Validating);
             // 
             // TextDesc

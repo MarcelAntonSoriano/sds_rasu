@@ -37,7 +37,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Form_FK";
             this.Text = "Form_FK";
+            this.Load += new System.EventHandler(this.Form_FK_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
