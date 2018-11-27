@@ -10,9 +10,8 @@ namespace gestion_categorias
         }
         private void Form_categorias_Load_1(object sender, EventArgs e)
         {
-            tabla = "UserRanks";
+            tabla = "UserCategories";
             Form1_Load(sender, e);
-            
         }
     }
 }

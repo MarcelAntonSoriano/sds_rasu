@@ -15,6 +15,7 @@ namespace gestion_pantallas
         public Form_pantallas()
         {
             InitializeComponent();
+
         }
     }
 }
