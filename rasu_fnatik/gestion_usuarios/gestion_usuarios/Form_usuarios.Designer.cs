@@ -62,14 +62,14 @@
             // 
             this.sdsCodi1.AbreCS = null;
             this.sdsCodi1.ClaseCS = null;
-            this.sdsCodi1.ControlID = null;
+            this.sdsCodi1.ControlID = "controlTextBox3";
             this.sdsCodi1.FormCS = null;
             this.sdsCodi1.Location = new System.Drawing.Point(64, 198);
             this.sdsCodi1.Name = "sdsCodi1";
-            this.sdsCodi1.NombreCodi = null;
-            this.sdsCodi1.NombreDesc = null;
-            this.sdsCodi1.NombreID = null;
-            this.sdsCodi1.NombreTaula = null;
+            this.sdsCodi1.NombreCodi = "CodeCategory";
+            this.sdsCodi1.NombreDesc = "DescCategory";
+            this.sdsCodi1.NombreID = "idUserCategory";
+            this.sdsCodi1.NombreTaula = "UserCategories";
             this.sdsCodi1.Requerido = false;
             this.sdsCodi1.Size = new System.Drawing.Size(304, 26);
             this.sdsCodi1.TabIndex = 15;

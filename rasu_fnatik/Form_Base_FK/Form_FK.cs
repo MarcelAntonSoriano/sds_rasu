@@ -16,10 +16,8 @@ namespace Form_Base_FK
     public partial class Form_FK : Form
     {
         DataSet ds = new DataSet();
-        DataSet ds2 = new DataSet();
         Clase_BBDD bd = new Clase_BBDD();
         bool IsNew = false;
-        public string query { get; set; }
         public string tabla { get; set; }
         DataRow dr;
         public Form_FK()
@@ -30,20 +28,19 @@ namespace Form_Base_FK
         public void Form_FK_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
-            if (query != null)
+            if (tabla != null)
             {
                 
-                ds2 = bd.PortarTaula(tabla);
-                ds = bd.PortarPerConsulta(query);
+                ds = bd.PortarTaula(tabla);
                 dataGridView1.DataSource = ds.Tables[0];
-                dataGridView1.Columns[0].Visible = false;
+                
                 PortarDades();
             }
         }
 
         public void PortarDades()
         {
-            int count = 1;
+            int count = 0;
             
             foreach (Control ctr in this.Controls)
             {
@@ -57,7 +54,7 @@ namespace Form_Base_FK
                     }
                     else
                     {
-                        ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ds2.Tables[0].Rows[count][((ControlTextBox)ctr).Campo].ToString());
+                        ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
                         count++;
                     }
                     
@@ -66,7 +63,7 @@ namespace Form_Base_FK
                 {
                     ((sdsCodi.sdsCodi)ctr).DataBindings.Clear();
                     ctr.Text = "";
-                    ((sdsCodi.sdsCodi)ctr).DataBindings.Add("NombreCodi", ds.Tables[0], ((sdsCodi.sdsCodi)ctr).NombreTaula);
+                    ((sdsCodi.sdsCodi)ctr).DataBindings.Add("NombreCodi", ds.Tables[0], ((sdsCodi.sdsCodi)ctr).NombreCodi);
                 }
             }
             //dataGridView1.DataSource = ds.Tables[0];
@@ -105,6 +102,7 @@ namespace Form_Base_FK
                 {
                     if (ctr.GetType() == typeof(ControlTextBox))
                     {
+                        
                         ControlTextBox ctr1 = (ControlTextBox)ctr;
 
                         dr[ctr1.Campo] = ctr.Text;
@@ -117,7 +115,7 @@ namespace Form_Base_FK
                 }
                 ds.Tables[0].Rows.Add(dr);
             }
-            bd.Actualitzar(ds, "select * from " + query);
+            bd.Actualitzar(ds, "select * from " + tabla);
             IsNew = false;
         }
     }
