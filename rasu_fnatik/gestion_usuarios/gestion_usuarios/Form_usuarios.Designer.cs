@@ -53,7 +53,7 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(458, 20);
+            this.panel1.Location = new System.Drawing.Point(471, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(36, 34);
             this.panel1.TabIndex = 14;
@@ -128,7 +128,7 @@
             // 
             // controlTextBox2
             // 
-            this.controlTextBox2.Campo = null;
+            this.controlTextBox2.Campo = "idUserRank";
             this.controlTextBox2.EsForanea = true;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox2.Location = new System.Drawing.Point(365, 140);
@@ -139,7 +139,7 @@
             // 
             // controlTextBox3
             // 
-            this.controlTextBox3.Campo = null;
+            this.controlTextBox3.Campo = "idUserCategory";
             this.controlTextBox3.EsForanea = true;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox3.Location = new System.Drawing.Point(365, 204);
@@ -150,7 +150,7 @@
             // 
             // controlTextBox4
             // 
-            this.controlTextBox4.Campo = null;
+            this.controlTextBox4.Campo = "idPlanet";
             this.controlTextBox4.EsForanea = true;
             this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox4.Location = new System.Drawing.Point(365, 269);
@@ -161,7 +161,7 @@
             // 
             // controlTextBox5
             // 
-            this.controlTextBox5.Campo = null;
+            this.controlTextBox5.Campo = "idSpecie";
             this.controlTextBox5.EsForanea = true;
             this.controlTextBox5.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox5.Location = new System.Drawing.Point(365, 335);

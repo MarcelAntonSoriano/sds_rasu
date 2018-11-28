@@ -16,9 +16,11 @@ namespace Form_Base_FK
     public partial class Form_FK : Form
     {
         DataSet ds = new DataSet();
+        DataSet ds2 = new DataSet();
         Clase_BBDD bd = new Clase_BBDD();
         bool IsNew = false;
         public string query { get; set; }
+        public string tabla { get; set; }
         DataRow dr;
         public Form_FK()
         {
@@ -30,7 +32,9 @@ namespace Form_Base_FK
             if (DesignMode) return;
             if (query != null)
             {
-                ds = bd.PortarTaula(query);
+                
+                ds2 = bd.PortarTaula(tabla);
+                ds = bd.PortarPerConsulta(query);
                 dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Columns[0].Visible = false;
                 PortarDades();
@@ -39,13 +43,24 @@ namespace Form_Base_FK
 
         public void PortarDades()
         {
+            int count = 1;
+            
             foreach (Control ctr in this.Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
                 {
                     ((ControlTextBox)ctr).DataBindings.Clear();
                     ctr.Text = "";
-                    ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
+                    if (!((ControlTextBox)ctr).EsForanea)
+                    {                       
+                        ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
+                    }
+                    else
+                    {
+                        ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ds2.Tables[0].Rows[count][((ControlTextBox)ctr).Campo].ToString());
+                        count++;
+                    }
+                    
                 }
                 else if(ctr.GetType() == typeof(sdsCodi.sdsCodi))
                 {
