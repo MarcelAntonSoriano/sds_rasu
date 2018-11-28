@@ -27,12 +27,15 @@ namespace Form_Base_FK
 
         public void Form_FK_Load(object sender, EventArgs e)
         {
-            ds = bd.PortarTaula(tabla);
-            if (DesignMode) return;
-            dataGridView1.DataSource = ds.Tables[0];
-            foreach (DataGridViewColumn  dc in dataGridView1.Columns)
+            if (tabla != null)
             {
-                dataGridView1.Columns[dc.Name].Visible = dc.Name.Contains("id");
+                ds = bd.PortarTaula(tabla);
+                if (DesignMode) return;
+                dataGridView1.DataSource = ds.Tables[0];
+                foreach (DataGridViewColumn dc in dataGridView1.Columns)
+                {
+                    dataGridView1.Columns[dc.Name].Visible = !dc.Name.Contains("id");
+                }
             }
         }
 
