@@ -76,6 +76,10 @@
       <Project>{bfcd1677-8d39-420e-acaf-3ccd2c88a302}</Project>
       <Name>Form_Base_FK</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\sdsCodi\sdsCodi.csproj">
+      <Project>{4FB9197F-7F5E-4BF5-885C-3E7F6CFE6CE3}</Project>
+      <Name>sdsCodi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

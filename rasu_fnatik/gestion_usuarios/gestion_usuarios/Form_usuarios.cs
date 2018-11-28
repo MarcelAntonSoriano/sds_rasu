@@ -11,7 +11,7 @@ namespace gestion_usuarios
 
         private void Form_usuarios_Load(object sender, EventArgs e)
         {
-            query = "";
+            query = "SELECT Users.CodeUser, UserRanks.CodeRank, UserCategories.CodeCategory, Species.CodeSpecie, Planets.CodePlanet FROM UserCategories INNER JOIN Users ON UserCategories.idUserCategory = Users.idUserCategory INNER JOIN UserRanks ON Users.idUserRank = UserRanks.idUserRank INNER JOIN Species ON Users.idSpecie = Species.idSpecie INNER JOIN Planets ON Users.idPlanet = Planets.idPlanet";
             Form_FK_Load(sender, e);
         }
     }

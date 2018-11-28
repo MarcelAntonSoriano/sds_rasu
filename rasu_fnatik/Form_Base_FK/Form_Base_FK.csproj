@@ -73,9 +73,9 @@
       <Project>{c6378c78-7a9b-4978-877b-cb48b986cd4c}</Project>
       <Name>Form_Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SdsCodi_FNATIK\Sds\Sds\Sds.csproj">
-      <Project>{ad43cc23-2fe6-447d-8415-cd4328744054}</Project>
-      <Name>Sds</Name>
+    <ProjectReference Include="..\sdsCodi\sdsCodi.csproj">
+      <Project>{4fb9197f-7f5e-4bf5-885c-3e7f6cfe6ce3}</Project>
+      <Name>sdsCodi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

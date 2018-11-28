@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 using Control_FNATIK;
-using Sds; 
+using sdsCodi; 
 
 namespace Form_Base_FK
 {
@@ -47,11 +47,11 @@ namespace Form_Base_FK
                     ctr.Text = "";
                     ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
                 }
-                else if(ctr.GetType() == typeof(sdsCodi))
+                else if(ctr.GetType() == typeof(sdsCodi.sdsCodi))
                 {
-                    ((sdsCodi)ctr).DataBindings.Clear();
+                    ((sdsCodi.sdsCodi)ctr).DataBindings.Clear();
                     ctr.Text = "";
-                    ((sdsCodi)ctr).DataBindings.Add("NombreCodi", ds.Tables[0], ((sdsCodi)ctr).NombreTaula);
+                    ((sdsCodi.sdsCodi)ctr).DataBindings.Add("NombreCodi", ds.Tables[0], ((sdsCodi.sdsCodi)ctr).NombreTaula);
                 }
             }
             //dataGridView1.DataSource = ds.Tables[0];
@@ -71,9 +71,9 @@ namespace Form_Base_FK
                     //if(count==0) controlTextBox1.Focus();                   
                     count++;
                 }
-                else if (ctr.GetType() == typeof(sdsCodi))
+                else if (ctr.GetType() == typeof(sdsCodi.sdsCodi))
                 {
-                    ((sdsCodi)ctr).DataBindings.Clear();
+                    ((sdsCodi.sdsCodi)ctr).DataBindings.Clear();
                     ctr.Text = "";
                     //if(count==0) controlTextBox1.Focus();                   
                     count++;
@@ -94,9 +94,9 @@ namespace Form_Base_FK
 
                         dr[ctr1.Campo] = ctr.Text;
                     }
-                    else if (ctr.GetType() == typeof(sdsCodi))
+                    else if (ctr.GetType() == typeof(sdsCodi.sdsCodi))
                     {
-                        sdsCodi ctr1 = (sdsCodi)ctr;
+                        sdsCodi.sdsCodi ctr1 = (sdsCodi.sdsCodi)ctr;
                         dr[ctr1.NombreTaula] = ctr.Text;
                     }
                 }
