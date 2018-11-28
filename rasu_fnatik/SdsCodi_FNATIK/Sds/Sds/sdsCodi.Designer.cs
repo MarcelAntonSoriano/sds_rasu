@@ -46,14 +46,14 @@
             // 
             this.TextCode.Location = new System.Drawing.Point(57, 10);
             this.TextCode.Name = "TextCode";
-            this.TextCode.Size = new System.Drawing.Size(100, 20);
+            this.TextCode.Size = new System.Drawing.Size(73, 20);
             this.TextCode.TabIndex = 1;
             this.TextCode.Leave += new System.EventHandler(this.TextCode_Leave);
             this.TextCode.Validating += new System.ComponentModel.CancelEventHandler(this.TextCode_Validating);
             // 
             // TextDesc
             // 
-            this.TextDesc.Location = new System.Drawing.Point(163, 10);
+            this.TextDesc.Location = new System.Drawing.Point(145, 10);
             this.TextDesc.Name = "TextDesc";
             this.TextDesc.Size = new System.Drawing.Size(244, 20);
             this.TextDesc.TabIndex = 2;
@@ -66,7 +66,7 @@
             this.Controls.Add(this.TextCode);
             this.Controls.Add(this.Label);
             this.Name = "sdsCodi";
-            this.Size = new System.Drawing.Size(434, 41);
+            this.Size = new System.Drawing.Size(411, 41);
             this.ResumeLayout(false);
             this.PerformLayout();
 

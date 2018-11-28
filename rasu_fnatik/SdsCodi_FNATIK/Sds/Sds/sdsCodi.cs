@@ -53,13 +53,18 @@ namespace Sds
         public string NombreCodi
         {
             get { return _nombreCodi; }
-            set { _nombreCodi = value; }
+            set {
+                _nombreCodi = value;
+                TextCode.Text = _nombreCodi;
+                }
         }
 
         public string NombreDesc
         {
             get { return _nombreDesc; }
-            set { _nombreDesc = value; }
+            set { _nombreDesc = value;
+                TextDesc.Text = _nombreDesc;
+            }
         }
 
         public string NombreTaula

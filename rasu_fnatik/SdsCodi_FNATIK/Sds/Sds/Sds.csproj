@@ -90,6 +90,10 @@
       <Project>{fbe3cf6b-da85-4428-bbcf-34f8deacb897}</Project>
       <Name>Clase_bbdd_fnatik</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\ControlTextBox_FNATIK\Control_FNATIK\Control_FNATIK.csproj">
+      <Project>{05220585-359f-4068-9f85-2f483005ff54}</Project>
+      <Name>Control_FNATIK</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
