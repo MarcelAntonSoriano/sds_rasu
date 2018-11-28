@@ -72,9 +72,9 @@
       <Project>{ca4a213d-5ff3-4d05-a221-fed09c34362b}</Project>
       <Name>CustomControlButton</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Pruevas2\Pruevas2\Form_Base.csproj">
-      <Project>{c6378c78-7a9b-4978-877b-cb48b986cd4c}</Project>
-      <Name>Form_Base</Name>
+    <ProjectReference Include="..\..\Form_Base_FK\Form_Base_FK.csproj">
+      <Project>{bfcd1677-8d39-420e-acaf-3ccd2c88a302}</Project>
+      <Name>Form_Base_FK</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

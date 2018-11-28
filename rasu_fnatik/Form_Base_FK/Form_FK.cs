@@ -18,19 +18,19 @@ namespace Form_Base_FK
         DataSet ds = new DataSet();
         Clase_BBDD bd = new Clase_BBDD();
         bool IsNew = false;
-        public string tabla { get; set; }
+        public string query { get; set; }
         DataRow dr;
         public Form_FK()
         {
             InitializeComponent();
         }
 
-        private void Form_FK_Load(object sender, EventArgs e)
+        public void Form_FK_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
-            if (tabla != null)
+            if (query != null)
             {
-                ds = bd.PortarTaula(tabla);
+                ds = bd.PortarTaula(query);
                 dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Columns[0].Visible = false;
                 PortarDades();
@@ -102,7 +102,7 @@ namespace Form_Base_FK
                 }
                 ds.Tables[0].Rows.Add(dr);
             }
-            bd.Actualitzar(ds, "select * from " + tabla);
+            bd.Actualitzar(ds, "select * from " + query);
             IsNew = false;
         }
     }
