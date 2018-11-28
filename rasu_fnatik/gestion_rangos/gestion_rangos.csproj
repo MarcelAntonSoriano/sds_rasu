@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\DLL\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -57,6 +57,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ControlTextBox_FNATIK\Control_FNATIK\Control_FNATIK.csproj">
+      <Project>{05220585-359F-4068-9F85-2F483005FF54}</Project>
+      <Name>Control_FNATIK</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pruevas2\Pruevas2\Form_Base.csproj">
       <Project>{c6378c78-7a9b-4978-877b-cb48b986cd4c}</Project>
       <Name>Form_Base</Name>

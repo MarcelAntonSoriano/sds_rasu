@@ -36,6 +36,7 @@
             this.controlTextBox6 = new Control_FNATIK.ControlTextBox();
             this.controlTextBox7 = new Control_FNATIK.ControlTextBox();
             this.controlTextBox8 = new Control_FNATIK.ControlTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // controlTextBox1
@@ -127,11 +128,19 @@
             this.controlTextBox8.Size = new System.Drawing.Size(31, 20);
             this.controlTextBox8.TabIndex = 10;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(627, 105);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(108, 39);
+            this.panel1.TabIndex = 11;
+            // 
             // Form_pantallas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.controlTextBox8);
             this.Controls.Add(this.controlTextBox7);
             this.Controls.Add(this.controlTextBox6);
@@ -151,6 +160,7 @@
             this.Controls.SetChildIndex(this.controlTextBox6, 0);
             this.Controls.SetChildIndex(this.controlTextBox7, 0);
             this.Controls.SetChildIndex(this.controlTextBox8, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +176,6 @@
         private Control_FNATIK.ControlTextBox controlTextBox6;
         private Control_FNATIK.ControlTextBox controlTextBox7;
         private Control_FNATIK.ControlTextBox controlTextBox8;
+        private System.Windows.Forms.Panel panel1;
     }
 }

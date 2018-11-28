@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.controlTextBox4 = new Control_FNATIK.ControlTextBox();
             this.controlTextBox3 = new Control_FNATIK.ControlTextBox();
             this.controlTextBox2 = new Control_FNATIK.ControlTextBox();
             this.controlTextBox1 = new Control_FNATIK.ControlTextBox();
@@ -36,14 +37,25 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(588, 53);
+            this.panel1.Location = new System.Drawing.Point(588, 59);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 6;
             // 
+            // controlTextBox4
+            // 
+            this.controlTextBox4.Campo = "AccessLevel";
+            this.controlTextBox4.EsForanea = false;
+            this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
+            this.controlTextBox4.Location = new System.Drawing.Point(306, 139);
+            this.controlTextBox4.Name = "controlTextBox4";
+            this.controlTextBox4.NoSalirSiVacia = false;
+            this.controlTextBox4.Size = new System.Drawing.Size(100, 20);
+            this.controlTextBox4.TabIndex = 7;
+            // 
             // controlTextBox3
             // 
-            this.controlTextBox3.Campo = "idUserRank";
+            this.controlTextBox3.Campo = "idUserCategory";
             this.controlTextBox3.Enabled = false;
             this.controlTextBox3.EsForanea = false;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
@@ -55,10 +67,10 @@
             // 
             // controlTextBox2
             // 
-            this.controlTextBox2.Campo = "DescRank";
+            this.controlTextBox2.Campo = "DescCategory";
             this.controlTextBox2.EsForanea = false;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox2.Location = new System.Drawing.Point(306, 119);
+            this.controlTextBox2.Location = new System.Drawing.Point(306, 102);
             this.controlTextBox2.Name = "controlTextBox2";
             this.controlTextBox2.NoSalirSiVacia = false;
             this.controlTextBox2.Size = new System.Drawing.Size(100, 20);
@@ -66,7 +78,7 @@
             // 
             // controlTextBox1
             // 
-            this.controlTextBox1.Campo = "CodeRank";
+            this.controlTextBox1.Campo = "CodeCategory";
             this.controlTextBox1.EsForanea = false;
             this.controlTextBox1.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
             this.controlTextBox1.Location = new System.Drawing.Point(306, 63);
@@ -80,6 +92,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.controlTextBox4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.controlTextBox3);
             this.Controls.Add(this.controlTextBox2);
@@ -91,6 +104,7 @@
             this.Controls.SetChildIndex(this.controlTextBox2, 0);
             this.Controls.SetChildIndex(this.controlTextBox3, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.controlTextBox4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +116,6 @@
         private Control_FNATIK.ControlTextBox controlTextBox2;
         private Control_FNATIK.ControlTextBox controlTextBox3;
         private System.Windows.Forms.Panel panel1;
+        private Control_FNATIK.ControlTextBox controlTextBox4;
     }
 }
