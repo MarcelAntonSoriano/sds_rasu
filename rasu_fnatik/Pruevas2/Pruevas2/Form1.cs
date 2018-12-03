@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Control_FNATIK;
 using Clase_bbdd_fnatik;
 using CustomControlButton;
+using System.Text.RegularExpressions;
 
 namespace Form_Base
 {
@@ -44,7 +45,8 @@ namespace Form_Base
             }
             //dataGridView1.DataSource = ds.Tables[0];
         }
-
+        
+        //Actualizar
         private void button2_Click(object sender, EventArgs e)
         {
             if (IsNew) {
@@ -53,37 +55,47 @@ namespace Form_Base
                 {
                     if (ctr.GetType() == typeof(ControlTextBox))
                     {
-                        ControlTextBox ctr1 = (ControlTextBox)ctr;
-
-                        dr[ctr1.Campo] = ctr.Text;
+                        ControlTextBox ctr1 = (ControlTextBox)ctr;                        
+                       
+                        if (ctr1.Campo.Contains("id"))
+                        {
+                            ctr1.Text = "1";
+                        }
+                        else
+                        {
+                            dr[ctr1.Campo] = ctr.Text;
+                        }
                     }
                 }
                 ds.Tables[0].Rows.Add(dr);
             }
             bd.Actualitzar(ds, "select * from " + tabla);
+            PortarDades();
             IsNew = false;
         }
-
+        //Nuevo
         private void button1_Click(object sender, EventArgs e)
         {
+
             dr = ds.Tables[0].NewRow();
             IsNew = true;
-            int count = 0;
+
             foreach (Control ctr in this.Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
                 {
                    ((ControlTextBox)ctr).DataBindings.Clear();
-                    ctr.Text = "";
-                    //if(count==0) controlTextBox1.Focus();                   
-                    count++;
+                    ctr.Text = "";                 
                 }
             } 
+            foreach(Control ctr in this.Controls)
+            {
+                if (ctr.GetType() == typeof(ControlTextBox))
+                {
+                    ctr.Focus();
+                }
+            }
         }
-
-        private void controlTextBox3_Leave(object sender, EventArgs e)
-        {
-            PortarDades();
-        }
+      
     }
 }

@@ -37,14 +37,16 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(588, 59);
+            this.panel1.Location = new System.Drawing.Point(596, 89);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(94, 38);
             this.panel1.TabIndex = 6;
             // 
             // controlTextBox4
             // 
             this.controlTextBox4.Campo = "AccessLevel";
+            this.controlTextBox4.CausesValidation = false;
+            this.controlTextBox4.ControlSds = null;
             this.controlTextBox4.EsForanea = false;
             this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox4.Location = new System.Drawing.Point(306, 139);
@@ -56,10 +58,12 @@
             // controlTextBox3
             // 
             this.controlTextBox3.Campo = "idUserCategory";
+            this.controlTextBox3.CausesValidation = false;
+            this.controlTextBox3.ControlSds = null;
             this.controlTextBox3.Enabled = false;
             this.controlTextBox3.EsForanea = false;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
-            this.controlTextBox3.Location = new System.Drawing.Point(646, 85);
+            this.controlTextBox3.Location = new System.Drawing.Point(633, 89);
             this.controlTextBox3.Name = "controlTextBox3";
             this.controlTextBox3.NoSalirSiVacia = false;
             this.controlTextBox3.Size = new System.Drawing.Size(26, 20);
@@ -68,6 +72,8 @@
             // controlTextBox2
             // 
             this.controlTextBox2.Campo = "DescCategory";
+            this.controlTextBox2.CausesValidation = false;
+            this.controlTextBox2.ControlSds = null;
             this.controlTextBox2.EsForanea = false;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
             this.controlTextBox2.Location = new System.Drawing.Point(306, 102);
@@ -79,6 +85,8 @@
             // controlTextBox1
             // 
             this.controlTextBox1.Campo = "CodeCategory";
+            this.controlTextBox1.CausesValidation = false;
+            this.controlTextBox1.ControlSds = null;
             this.controlTextBox1.EsForanea = false;
             this.controlTextBox1.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
             this.controlTextBox1.Location = new System.Drawing.Point(306, 63);

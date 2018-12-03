@@ -36,36 +36,21 @@ namespace Form_Base_FK
                 {
                     dataGridView1.Columns[dc.Name].Visible = !dc.Name.Contains("id");
                 }
+                PortarDades();
             }
         }
 
         public void PortarDades()
-        {
-            int count = 0;
-            
+        {                   
+
             foreach (Control ctr in this.Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
                 {
                     ((ControlTextBox)ctr).DataBindings.Clear();
                     ctr.Text = "";
-                    if (!((ControlTextBox)ctr).EsForanea)
-                    {                       
-                        ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
-                    }
-                    else
-                    {
-                        ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
-                        count++;
-                    }
-                    
-                }
-                else if(ctr.GetType() == typeof(sdsCodi.sdsCodi))
-                {
-                    ((sdsCodi.sdsCodi)ctr).DataBindings.Clear();
-                    ctr.Text = "";
-                    ((sdsCodi.sdsCodi)ctr).DataBindings.Add("NombreCodi", ds.Tables[0], ((sdsCodi.sdsCodi)ctr).NombreCodi);
-                }
+                    ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);                                    
+                }                
             }
             //dataGridView1.DataSource = ds.Tables[0];
         }
@@ -74,24 +59,15 @@ namespace Form_Base_FK
         {
             dr = ds.Tables[0].NewRow();
             IsNew = true;
-            int count = 0;
+
             foreach (Control ctr in this.Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
                 {
                     ((ControlTextBox)ctr).DataBindings.Clear();
                     ctr.Text = "";
-                    //if(count==0) controlTextBox1.Focus();                   
-                    count++;
-                }
-                else if (ctr.GetType() == typeof(sdsCodi.sdsCodi))
-                {
-                    ((sdsCodi.sdsCodi)ctr).DataBindings.Clear();
-                    ctr.Text = "";
-                    //if(count==0) controlTextBox1.Focus();                   
-                    count++;
-                }
-
+                    
+                }                
             }
         }
 
@@ -117,6 +93,7 @@ namespace Form_Base_FK
                 ds.Tables[0].Rows.Add(dr);
             }
             bd.Actualitzar(ds, "select * from " + tabla);
+            PortarDades();
             IsNew = false;
         }
     }

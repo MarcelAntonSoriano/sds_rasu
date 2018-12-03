@@ -2,11 +2,14 @@
 using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Data;
+using Control_FNATIK;
 
 namespace Control_FNATIK
 {
     public class ControlTextBox : TextBox
     {
+        Clase_bbdd_fnatik.Clase_BBDD bd = new Clase_bbdd_fnatik.Clase_BBDD();
         public ControlTextBox()
         {
             InitializeComponent();
@@ -17,10 +20,13 @@ namespace Control_FNATIK
             // 
             // ControlTextBox
             // 
+            this.CausesValidation = false;
+            this.TextChanged += new System.EventHandler(this.ControlTextBox_TextChanged);
             this.Enter += new System.EventHandler(this.ControlTextBox_Enter);
             this.Leave += new System.EventHandler(this.ControlTextBox_Leave);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.ControlTextBox_Validating);
             this.ResumeLayout(false);
+
         }
 
         //PROPIEDADES
@@ -29,7 +35,14 @@ namespace Control_FNATIK
         private string _campo;
         private bool _vacia = false;
         private bool _foranea = false;
+        private string _controlSds;
 
+        public string ControlSds
+        {
+            get { return _controlSds;}
+            set { _controlSds = value; }
+               
+        }
         public bool EsForanea
         {
             get { return _foranea; }
@@ -82,6 +95,23 @@ namespace Control_FNATIK
         private void ControlTextBox_Leave(object sender, EventArgs e)
         {
             BackColor = Color.White;
+        }
+
+        //TextChanged
+        private void ControlTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Form frm = FindForm();
+
+            if (EsForanea)
+            {
+                foreach (Control ctr in frm.Controls)
+                {
+                    if (ctr.GetType() == typeof(sdsCodi.sdsCodi) && ((sdsCodi.sdsCodi)ctr).ControlID == Name)
+                    {
+                        ctr.Text = Text;
+                    }
+                }
+            }
         }
     }
 }

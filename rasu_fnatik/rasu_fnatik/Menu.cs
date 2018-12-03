@@ -14,6 +14,10 @@ namespace rasu_fnatik
         private Timer timer1;
         private int countTimer = 1800;
         DataSet ds = new DataSet();
+        SoundPlayer sp = new SoundPlayer
+        {
+            SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Megalovania.wav"
+        };
 
         public Menu()
         {
@@ -87,13 +91,14 @@ namespace rasu_fnatik
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer
-            {
-                SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Megalovania.wav"
-            };
+        {                          
             sp.Play();
-            sp.PlayLooping();                
+            sp.PlayLooping();            
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            sp.Stop();
         }
     }
 }

@@ -66,13 +66,20 @@ namespace Clase_bbdd_fnatik
         }        
         public DataSet Actualitzar(DataSet t_entrada,string consulta)
         {
-            
-            Abrir();
-            da = new SqlDataAdapter(consulta, conexion);
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            try
+            {
+                Abrir();
+                da = new SqlDataAdapter(consulta, conexion);
+                SqlCommandBuilder builder = new SqlCommandBuilder(da);
 
-            da.Update(t_entrada.Tables[0]);
-            Cerrar();            
+                da.Update(t_entrada.Tables[0]);
+                Cerrar();
+                
+            }
+            catch(SqlException e){
+
+                System.Windows.Forms.MessageBox.Show("Asegurese de eliminar un registro que no tenga registros de otras tablas asociado");
+            }
             return t_entrada;
         }
 

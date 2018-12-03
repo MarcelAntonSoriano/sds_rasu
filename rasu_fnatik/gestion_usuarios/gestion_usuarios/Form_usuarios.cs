@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace gestion_usuarios 
 {
     public partial class Form_usuarios : Form_Base_FK.Form_FK

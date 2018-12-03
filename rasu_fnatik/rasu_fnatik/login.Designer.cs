@@ -37,6 +37,7 @@
             this.btn_login = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_about = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +104,7 @@
             this.btn_login.FlatAppearance.BorderSize = 3;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(266, 326);
+            this.btn_login.Location = new System.Drawing.Point(179, 328);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(75, 30);
             this.btn_login.TabIndex = 5;
@@ -134,11 +135,26 @@
             this.btn_about.UseVisualStyleBackColor = false;
             this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(350, 328);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "EXIT";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 400);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_about);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_login);
@@ -148,6 +164,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -167,6 +184,7 @@
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_about;
+        private System.Windows.Forms.Button button2;
     }
 }
 
