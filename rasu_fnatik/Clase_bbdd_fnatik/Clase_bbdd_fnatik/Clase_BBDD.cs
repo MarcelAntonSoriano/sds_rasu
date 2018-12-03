@@ -27,11 +27,13 @@ namespace Clase_bbdd_fnatik
 
         public DataSet PortarPerConsulta(string consulta)
         {
-            taula = new DataSet();
-            Abrir();
-            da = new SqlDataAdapter(consulta, conexion);
-            da.Fill(taula);
-            Cerrar();
+            
+                taula = new DataSet();
+                Abrir();
+                da = new SqlDataAdapter(consulta, conexion);
+                da.Fill(taula);
+                Cerrar();
+          
             return taula;
         }
 
@@ -78,7 +80,7 @@ namespace Clase_bbdd_fnatik
             }
             catch(SqlException e){
 
-                System.Windows.Forms.MessageBox.Show("Asegurese de eliminar un registro que no tenga registros de otras tablas asociado");
+                System.Windows.Forms.MessageBox.Show("Este registro tiene más registros de otras tablas asociado");
             }
             return t_entrada;
         }

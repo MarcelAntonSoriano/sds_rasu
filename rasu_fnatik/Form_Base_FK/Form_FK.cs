@@ -27,6 +27,7 @@ namespace Form_Base_FK
 
         public void Form_FK_Load(object sender, EventArgs e)
         {
+            //dataGridView1.ColumnHe
             if (tabla != null)
             {
                 ds = bd.PortarTaula(tabla);
@@ -52,9 +53,8 @@ namespace Form_Base_FK
                     ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);                                    
                 }                
             }
-            //dataGridView1.DataSource = ds.Tables[0];
         }
-
+        //Nuevo
         private void button1_Click(object sender, EventArgs e)
         {
             dr = ds.Tables[0].NewRow();
@@ -62,15 +62,18 @@ namespace Form_Base_FK
 
             foreach (Control ctr in this.Controls)
             {
-                if (ctr.GetType() == typeof(ControlTextBox))
+                if (ctr.Name.Contains("id")||(ctr.Name.Contains("Code")))
+                {
+                    
+                }
+                else if (ctr.GetType() == typeof(ControlTextBox))
                 {
                     ((ControlTextBox)ctr).DataBindings.Clear();
-                    ctr.Text = "";
-                    
+                    ctr.Text = "";                    
                 }                
             }
         }
-
+        //Actualizar
         private void button2_Click(object sender, EventArgs e)
         {
             if (IsNew)
@@ -83,12 +86,7 @@ namespace Form_Base_FK
                         ControlTextBox ctr1 = (ControlTextBox)ctr;
 
                         dr[ctr1.Campo] = ctr.Text;
-                    }
-                    else if (ctr.GetType() == typeof(sdsCodi.sdsCodi))
-                    {
-                        sdsCodi.sdsCodi ctr1 = (sdsCodi.sdsCodi)ctr;
-                        dr[ctr1.NombreTaula] = ctr.Text;
-                    }
+                    }                   
                 }
                 ds.Tables[0].Rows.Add(dr);
             }

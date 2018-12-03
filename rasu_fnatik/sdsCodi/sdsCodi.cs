@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace sdsCodi
 {
@@ -110,14 +112,24 @@ namespace sdsCodi
         public void InsertarId(string Texto)
         {
             query = "select * from " + NombreTaula + " where " + NombreID + " = " + Texto ;
-            if (Texto != null)
+            try
             {
                 ds = cb.PortarPerConsulta(query);
 
                 string idFora = ds.Tables[0].Rows.Count == 1 ? ds.Tables[0].Rows[0][NombreID].ToString() : "";
-
-                TextCode.Text = ds.Tables[0].Rows[0][NombreCodi].ToString();
-                TextDesc.Text = ds.Tables[0].Rows[0][NombreDesc].ToString();
+                try
+                {
+                    TextCode.Text = ds.Tables[0].Rows[0][NombreCodi].ToString();
+                    TextDesc.Text = ds.Tables[0].Rows[0][NombreDesc].ToString();
+                }catch(IndexOutOfRangeException e)
+                {
+                    MessageBox.Show("Este dato no existe");
+                }
+            }
+            catch (SqlException e)
+            {
+                TextCode.Text = "";
+                TextDesc.Text = "";
             }
         }
 
