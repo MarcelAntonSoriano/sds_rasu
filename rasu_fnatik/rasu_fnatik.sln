@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestion_rangos", "gestion_r
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sdsCodi", "sdsCodi\sdsCodi.csproj", "{4FB9197F-7F5E-4BF5-885C-3E7F6CFE6CE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_cerca", "Form_cerca\Form_cerca.csproj", "{E861CE59-BD1D-4746-9B0C-94532E38E186}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{4FB9197F-7F5E-4BF5-885C-3E7F6CFE6CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FB9197F-7F5E-4BF5-885C-3E7F6CFE6CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FB9197F-7F5E-4BF5-885C-3E7F6CFE6CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E861CE59-BD1D-4746-9B0C-94532E38E186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E861CE59-BD1D-4746-9B0C-94532E38E186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E861CE59-BD1D-4746-9B0C-94532E38E186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E861CE59-BD1D-4746-9B0C-94532E38E186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

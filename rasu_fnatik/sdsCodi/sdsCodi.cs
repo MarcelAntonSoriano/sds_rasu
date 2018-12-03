@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
 
 namespace sdsCodi
 {
@@ -54,7 +55,9 @@ namespace sdsCodi
         public string FormCS
         {
             get { return _formCS; }
-            set { _formCS = value; }
+            set {
+                value = "Form_cerca.Form_cerca";
+                _formCS = value; }
         }
         private string _text;
         public override string Text
@@ -70,7 +73,9 @@ namespace sdsCodi
         public string ClaseCS
         {
             get { return _claseCS; }
-            set { _claseCS = value; }
+            set {
+                value = @"Form_cerca.dll";
+                _claseCS = value; }
         }
 
         public string NombreID
@@ -191,6 +196,7 @@ namespace sdsCodi
             this.TextCode.Name = "TextCode";
             this.TextCode.Size = new System.Drawing.Size(44, 20);
             this.TextCode.TabIndex = 1;
+            this.TextCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextCode_KeyDown);
             this.TextCode.Leave += new System.EventHandler(this.TextCode_Leave);
             this.TextCode.Validating += new System.ComponentModel.CancelEventHandler(this.TextCode_Validating);
             // 
@@ -213,6 +219,31 @@ namespace sdsCodi
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void TextCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F2)
+            {
+                ObreCS();
+            }
+        }
+
+        private void ObreCS()
+        {
+            string nomControl = Name;
+
+            Assembly ensemblat = Assembly.LoadFrom(ClaseCS);
+
+            object DLLBD;
+            Type tipus;
+
+            string nomFormulari = FindForm().Name;
+
+            tipus = ensemblat.GetType(FormCS);
+            object[] args = { nomFormulari, nomControl, NombreTaula };
+            DLLBD = Activator.CreateInstance(tipus, args);
+            
         }
     }
 }
