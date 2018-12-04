@@ -87,6 +87,7 @@
             this.controlTextBox2.EsForanea = false;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
             this.controlTextBox2.Location = new System.Drawing.Point(306, 102);
+            this.controlTextBox2.MaxLength = 30;
             this.controlTextBox2.Name = "controlTextBox2";
             this.controlTextBox2.NoSalirSiVacia = false;
             this.controlTextBox2.Size = new System.Drawing.Size(100, 20);
@@ -100,6 +101,7 @@
             this.controlTextBox1.EsForanea = false;
             this.controlTextBox1.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
             this.controlTextBox1.Location = new System.Drawing.Point(306, 63);
+            this.controlTextBox1.MaxLength = 4;
             this.controlTextBox1.Name = "controlTextBox1";
             this.controlTextBox1.NoSalirSiVacia = false;
             this.controlTextBox1.Size = new System.Drawing.Size(100, 20);

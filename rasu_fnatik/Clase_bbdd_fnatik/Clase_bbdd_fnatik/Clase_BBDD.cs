@@ -80,7 +80,7 @@ namespace Clase_bbdd_fnatik
             }
             catch(SqlException e)
             {
-                System.Windows.Forms.MessageBox.Show("Este registro tiene más registros de otras tablas asociado");
+               System.Windows.Forms.MessageBox.Show("Este registro tiene más registros de otras tablas asociado");
             }
             catch (DBConcurrencyException ex)
             {
