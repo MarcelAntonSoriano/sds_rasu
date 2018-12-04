@@ -138,7 +138,13 @@ namespace sdsCodi
             }
         }
 
+        public void ValidarCodiCS(int numId)
+        {
+            bool insertar = false;
 
+            query = "select * from "+_nombreTaula + " where  " + NombreID + " = '" + Text +"'";
+            
+        }
         //EVENTOS
         private void TextCode_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -172,6 +178,7 @@ namespace sdsCodi
                 PossaIdFora(idFora);
             }
         }
+        
 
         //INITIALIZE
         private void InitializeComponent()
@@ -243,7 +250,10 @@ namespace sdsCodi
             tipus = ensemblat.GetType(FormCS);
             object[] args = { nomFormulari, nomControl, NombreTaula };
             DLLBD = Activator.CreateInstance(tipus, args);
+            Form frm2 = ((Form)DLLBD);
+            frm2.Show();  
             
         }
+       
     }
 }
