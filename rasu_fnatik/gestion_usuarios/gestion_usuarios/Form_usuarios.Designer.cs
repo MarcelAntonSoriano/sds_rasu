@@ -69,7 +69,7 @@
             this.controlTextBox2.ControlSds = null;
             this.controlTextBox2.EsForanea = true;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
-            this.controlTextBox2.Location = new System.Drawing.Point(360, 244);
+            this.controlTextBox2.Location = new System.Drawing.Point(360, 238);
             this.controlTextBox2.Name = "controlTextBox2";
             this.controlTextBox2.NoSalirSiVacia = false;
             this.controlTextBox2.Size = new System.Drawing.Size(25, 20);
@@ -82,7 +82,7 @@
             this.controlTextBox3.ControlSds = null;
             this.controlTextBox3.EsForanea = true;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
-            this.controlTextBox3.Location = new System.Drawing.Point(360, 276);
+            this.controlTextBox3.Location = new System.Drawing.Point(360, 270);
             this.controlTextBox3.Name = "controlTextBox3";
             this.controlTextBox3.NoSalirSiVacia = false;
             this.controlTextBox3.Size = new System.Drawing.Size(25, 20);
@@ -95,7 +95,7 @@
             this.controlTextBox4.ControlSds = null;
             this.controlTextBox4.EsForanea = true;
             this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
-            this.controlTextBox4.Location = new System.Drawing.Point(360, 308);
+            this.controlTextBox4.Location = new System.Drawing.Point(360, 302);
             this.controlTextBox4.Name = "controlTextBox4";
             this.controlTextBox4.NoSalirSiVacia = false;
             this.controlTextBox4.Size = new System.Drawing.Size(25, 20);
