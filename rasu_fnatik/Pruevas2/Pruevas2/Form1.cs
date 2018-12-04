@@ -49,29 +49,42 @@ namespace Form_Base
         //Actualizar
         private void button2_Click(object sender, EventArgs e)
         {
-            if (IsNew) {
-
-                foreach (Control ctr in this.Controls)
+            if (IsNew)
+            {
+                if (ComprobarTextBoxs())
                 {
-                    if (ctr.GetType() == typeof(ControlTextBox))
-                    {
-                        ControlTextBox ctr1 = (ControlTextBox)ctr;                        
+                    try { 
+                        foreach (Control ctr in this.Controls)
+                        {
+                            if (ctr.GetType() == typeof(ControlTextBox))
+                            {
+                                ControlTextBox ctr1 = (ControlTextBox)ctr;                        
                        
-                        if (ctr1.Campo.Contains("id"))
-                        {
-                            ctr1.Text = "1";
+                                if (ctr1.Campo.Contains("id"))
+                                {
+                                    ctr1.Text = "1";
+                                }
+                                else
+                                {
+                                    dr[ctr1.Campo] = ctr.Text;
+                                }
+                            }
                         }
-                        else
-                        {
-                            dr[ctr1.Campo] = ctr.Text;
-                        }
+                        ds.Tables[0].Rows.Add(dr);
+                        PortarDades();
+                    }
+                    catch (System.NullReferenceException re)
+                    {
+                        PortarDades();
                     }
                 }
-                ds.Tables[0].Rows.Add(dr);
-               
+                else
+                {
+                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
+                }
+
             }
             bd.Actualitzar(ds, "select * from " + tabla);
-            PortarDades();
             IsNew = false;
         }
         //Nuevo
@@ -97,6 +110,19 @@ namespace Form_Base
                 }
             }
         }
-      
+
+        public bool ComprobarTextBoxs()
+        {
+            bool permitir = true;
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr.GetType() == typeof(ControlTextBox))
+                {
+                    if (((ControlTextBox)ctr).Text == "") permitir = false;
+                }
+            }
+            return permitir;
+        }
+
     }
 }

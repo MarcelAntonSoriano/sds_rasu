@@ -65,13 +65,21 @@ namespace Form_Base_FK
             {
                 if (ComprobarTextBoxs())
                 {
-                    foreach (Control ctr in this.Controls)
-                    {
-                        if (ctr.GetType() == typeof(ControlTextBox))
-                            dr[((ControlTextBox)ctr).Campo] = ctr.Text;
+                    try{ 
+
+                        foreach (Control ctr in this.Controls)
+                        {
+                            if (ctr.GetType() == typeof(ControlTextBox))
+                                dr[((ControlTextBox)ctr).Campo] = ctr.Text;
+                        }
+                        ds.Tables[0].Rows.Add(dr);
+                        PortarDades();
                     }
-                    ds.Tables[0].Rows.Add(dr);
-                    PortarDades();
+                    catch (System.NullReferenceException re)
+                    {
+                        PortarDades();
+                    }
+                    
                 }
                 else
                 {
