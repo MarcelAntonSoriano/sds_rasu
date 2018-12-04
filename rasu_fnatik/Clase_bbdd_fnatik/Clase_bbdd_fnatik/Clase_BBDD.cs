@@ -82,6 +82,11 @@ namespace Clase_bbdd_fnatik
 
                 System.Windows.Forms.MessageBox.Show("Este registro tiene más registros de otras tablas asociado");
             }
+            catch (DBConcurrencyException ex)
+            {
+                System.Windows.Forms.MessageBox.Show("No se ha eliminado nada");
+            }
+            
             return t_entrada;
         }
 

@@ -116,11 +116,11 @@
             // 
             // sdsCodi1
             // 
-            this.sdsCodi1.AbreCS = null;
+            this.sdsCodi1.AbreCS = "";
             this.sdsCodi1.CausesValidation = false;
-            this.sdsCodi1.ClaseCS = null;
+            this.sdsCodi1.ClaseCS = "Form_cerca";
             this.sdsCodi1.ControlID = "controlTextBox2";
-            this.sdsCodi1.FormCS = null;
+            this.sdsCodi1.FormCS = "Form_cerca";
             this.sdsCodi1.Location = new System.Drawing.Point(55, 238);
             this.sdsCodi1.Name = "sdsCodi1";
             this.sdsCodi1.NombreCodi = "CodeRank";
