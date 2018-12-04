@@ -50,10 +50,12 @@
             this.controlTextBox4.EsForanea = false;
             this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox4.Location = new System.Drawing.Point(306, 139);
+            this.controlTextBox4.MaxLength = 3;
             this.controlTextBox4.Name = "controlTextBox4";
             this.controlTextBox4.NoSalirSiVacia = false;
             this.controlTextBox4.Size = new System.Drawing.Size(100, 20);
             this.controlTextBox4.TabIndex = 7;
+            this.controlTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.controlTextBox4_KeyPress);
             // 
             // controlTextBox3
             // 
@@ -105,6 +107,7 @@
             this.Controls.Add(this.controlTextBox3);
             this.Controls.Add(this.controlTextBox2);
             this.Controls.Add(this.controlTextBox1);
+            this.KeyPreview = true;
             this.Name = "Form_categorias";
             this.Text = "Form_categorias";
             this.Load += new System.EventHandler(this.Form_categorias_Load_1);
