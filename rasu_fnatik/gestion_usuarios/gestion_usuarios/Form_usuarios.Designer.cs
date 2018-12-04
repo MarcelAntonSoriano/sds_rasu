@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // controlTextBox1
@@ -74,7 +75,6 @@
             this.controlTextBox2.NoSalirSiVacia = false;
             this.controlTextBox2.Size = new System.Drawing.Size(25, 20);
             this.controlTextBox2.TabIndex = 0;
-            this.controlTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.controlTextBox2_KeyPress);
             // 
             // controlTextBox3
             // 
@@ -88,7 +88,6 @@
             this.controlTextBox3.NoSalirSiVacia = false;
             this.controlTextBox3.Size = new System.Drawing.Size(25, 20);
             this.controlTextBox3.TabIndex = 0;
-            this.controlTextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.controlTextBox3_KeyPress);
             // 
             // controlTextBox4
             // 
@@ -102,7 +101,6 @@
             this.controlTextBox4.NoSalirSiVacia = false;
             this.controlTextBox4.Size = new System.Drawing.Size(25, 20);
             this.controlTextBox4.TabIndex = 0;
-            this.controlTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.controlTextBox4_KeyPress);
             // 
             // controlTextBox5
             // 
@@ -116,7 +114,6 @@
             this.controlTextBox5.NoSalirSiVacia = false;
             this.controlTextBox5.Size = new System.Drawing.Size(25, 20);
             this.controlTextBox5.TabIndex = 0;
-            this.controlTextBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.controlTextBox5_KeyPress);
             // 
             // sdsCodi1
             // 
@@ -302,11 +299,19 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Codigo:";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(340, 228);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(67, 132);
+            this.panel1.TabIndex = 18;
+            // 
             // Form_usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1268, 479);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -349,6 +354,7 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +380,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

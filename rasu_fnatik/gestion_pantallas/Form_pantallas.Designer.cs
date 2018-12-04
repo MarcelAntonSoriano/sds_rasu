@@ -42,9 +42,11 @@
             // controlTextBox1
             // 
             this.controlTextBox1.Campo = "nom_dll";
+            this.controlTextBox1.CausesValidation = false;
+            this.controlTextBox1.ControlSds = null;
             this.controlTextBox1.EsForanea = false;
             this.controlTextBox1.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox1.Location = new System.Drawing.Point(162, 87);
+            this.controlTextBox1.Location = new System.Drawing.Point(138, 54);
             this.controlTextBox1.Name = "controlTextBox1";
             this.controlTextBox1.NoSalirSiVacia = false;
             this.controlTextBox1.Size = new System.Drawing.Size(100, 20);
@@ -53,9 +55,11 @@
             // controlTextBox2
             // 
             this.controlTextBox2.Campo = "nom_form";
+            this.controlTextBox2.CausesValidation = false;
+            this.controlTextBox2.ControlSds = null;
             this.controlTextBox2.EsForanea = false;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox2.Location = new System.Drawing.Point(162, 124);
+            this.controlTextBox2.Location = new System.Drawing.Point(138, 107);
             this.controlTextBox2.Name = "controlTextBox2";
             this.controlTextBox2.NoSalirSiVacia = false;
             this.controlTextBox2.Size = new System.Drawing.Size(100, 20);
@@ -64,9 +68,11 @@
             // controlTextBox3
             // 
             this.controlTextBox3.Campo = "nivel_acces";
+            this.controlTextBox3.CausesValidation = false;
+            this.controlTextBox3.ControlSds = null;
             this.controlTextBox3.EsForanea = false;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox3.Location = new System.Drawing.Point(162, 158);
+            this.controlTextBox3.Location = new System.Drawing.Point(138, 161);
             this.controlTextBox3.Name = "controlTextBox3";
             this.controlTextBox3.NoSalirSiVacia = false;
             this.controlTextBox3.Size = new System.Drawing.Size(100, 20);
@@ -75,9 +81,11 @@
             // controlTextBox4
             // 
             this.controlTextBox4.Campo = "texto";
+            this.controlTextBox4.CausesValidation = false;
+            this.controlTextBox4.ControlSds = null;
             this.controlTextBox4.EsForanea = false;
             this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox4.Location = new System.Drawing.Point(306, 87);
+            this.controlTextBox4.Location = new System.Drawing.Point(331, 54);
             this.controlTextBox4.Name = "controlTextBox4";
             this.controlTextBox4.NoSalirSiVacia = false;
             this.controlTextBox4.Size = new System.Drawing.Size(100, 20);
@@ -86,9 +94,11 @@
             // controlTextBox5
             // 
             this.controlTextBox5.Campo = "bgcolor";
+            this.controlTextBox5.CausesValidation = false;
+            this.controlTextBox5.ControlSds = null;
             this.controlTextBox5.EsForanea = false;
             this.controlTextBox5.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox5.Location = new System.Drawing.Point(306, 124);
+            this.controlTextBox5.Location = new System.Drawing.Point(331, 105);
             this.controlTextBox5.Name = "controlTextBox5";
             this.controlTextBox5.NoSalirSiVacia = false;
             this.controlTextBox5.Size = new System.Drawing.Size(100, 20);
@@ -97,9 +107,11 @@
             // controlTextBox6
             // 
             this.controlTextBox6.Campo = "textcolor";
+            this.controlTextBox6.CausesValidation = false;
+            this.controlTextBox6.ControlSds = null;
             this.controlTextBox6.EsForanea = false;
             this.controlTextBox6.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox6.Location = new System.Drawing.Point(462, 87);
+            this.controlTextBox6.Location = new System.Drawing.Point(488, 78);
             this.controlTextBox6.Name = "controlTextBox6";
             this.controlTextBox6.NoSalirSiVacia = false;
             this.controlTextBox6.Size = new System.Drawing.Size(100, 20);
@@ -108,9 +120,11 @@
             // controlTextBox7
             // 
             this.controlTextBox7.Campo = "nom_tabla";
+            this.controlTextBox7.CausesValidation = false;
+            this.controlTextBox7.ControlSds = null;
             this.controlTextBox7.EsForanea = false;
             this.controlTextBox7.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox7.Location = new System.Drawing.Point(462, 124);
+            this.controlTextBox7.Location = new System.Drawing.Point(488, 124);
             this.controlTextBox7.Name = "controlTextBox7";
             this.controlTextBox7.NoSalirSiVacia = false;
             this.controlTextBox7.Size = new System.Drawing.Size(100, 20);
@@ -119,6 +133,8 @@
             // controlTextBox8
             // 
             this.controlTextBox8.Campo = "id";
+            this.controlTextBox8.CausesValidation = false;
+            this.controlTextBox8.ControlSds = null;
             this.controlTextBox8.Enabled = false;
             this.controlTextBox8.EsForanea = false;
             this.controlTextBox8.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;

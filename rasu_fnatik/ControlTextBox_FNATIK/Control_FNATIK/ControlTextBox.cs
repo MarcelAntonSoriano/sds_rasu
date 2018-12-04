@@ -24,7 +24,6 @@ namespace Control_FNATIK
             this.TextChanged += new System.EventHandler(this.ControlTextBox_TextChanged);
             this.Enter += new System.EventHandler(this.ControlTextBox_Enter);
             this.Leave += new System.EventHandler(this.ControlTextBox_Leave);
-            this.Validating += new System.ComponentModel.CancelEventHandler(this.ControlTextBox_Validating);
             this.ResumeLayout(false);
 
         }
@@ -69,7 +68,7 @@ namespace Control_FNATIK
         //EVENTOS
 
         //Validating
-        private void ControlTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void ControlTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e, KeyPressEventArgs equisde)
         {
             string regex="";
 

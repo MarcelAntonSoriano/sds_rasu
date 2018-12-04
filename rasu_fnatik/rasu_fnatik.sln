@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sdsCodi", "sdsCodi\sdsCodi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_cerca", "Form_cerca\Form_cerca.csproj", "{E861CE59-BD1D-4746-9B0C-94532E38E186}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestion_planetas", "gestion_planetas\gestion_planetas.csproj", "{312E88AC-868C-462D-8A34-CCD395F3A54A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{E861CE59-BD1D-4746-9B0C-94532E38E186}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E861CE59-BD1D-4746-9B0C-94532E38E186}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E861CE59-BD1D-4746-9B0C-94532E38E186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312E88AC-868C-462D-8A34-CCD395F3A54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312E88AC-868C-462D-8A34-CCD395F3A54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312E88AC-868C-462D-8A34-CCD395F3A54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312E88AC-868C-462D-8A34-CCD395F3A54A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
