@@ -57,5 +57,10 @@
       <Name>Form_Base_FK</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_planetas.resx">
+      <DependentUpon>Form_planetas.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

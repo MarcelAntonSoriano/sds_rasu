@@ -333,7 +333,7 @@
             this.Controls.Add(this.controlTextBox1);
             this.Name = "Form_usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_usuarios";
+            this.Text = "Gestión de usuarios";
             this.Load += new System.EventHandler(this.Form_usuarios_Load);
             this.Controls.SetChildIndex(this.controlTextBox1, 0);
             this.Controls.SetChildIndex(this.controlTextBox2, 0);
