@@ -51,11 +51,7 @@ namespace Form_Base_FK
 
             foreach (Control ctr in this.Controls)
             {
-                if (ctr.Name.Contains("id")||(ctr.Name.Contains("Code")))
-                {
-                    
-                }
-                else if (ctr.GetType() == typeof(ControlTextBox))
+                if (ctr.GetType() == typeof(ControlTextBox))
                 {
                     ((ControlTextBox)ctr).DataBindings.Clear();
                     ctr.Text = "";                    
