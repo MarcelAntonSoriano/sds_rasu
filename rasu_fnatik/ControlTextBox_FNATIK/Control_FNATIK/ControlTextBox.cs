@@ -34,6 +34,7 @@ namespace Control_FNATIK
         private string _campo;
         private bool _vacia = false;
         private bool _foranea = false;
+        private bool _enableupdate = false;
         private string _controlSds;
 
         public string ControlSds
