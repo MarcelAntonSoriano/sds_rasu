@@ -68,7 +68,6 @@ namespace Form_Base
                     }
                 }
                 ds.Tables[0].Rows.Add(dr);
-               
             }
             bd.Actualitzar(ds, "select * from " + tabla);
             PortarDades();
