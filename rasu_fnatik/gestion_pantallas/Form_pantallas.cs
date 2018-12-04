@@ -23,5 +23,10 @@ namespace gestion_pantallas
             tabla = "MenuOptions";
             Form1_Load(sender, e);
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

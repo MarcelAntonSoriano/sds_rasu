@@ -77,6 +77,7 @@
             // BtnClose
             // 
             this.BtnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnClose.AutoToolTip = false;
             this.BtnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
             this.BtnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
