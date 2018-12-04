@@ -85,7 +85,7 @@ namespace rasu_fnatik
             {
                 timer1.Stop();
                 MessageBox.Show("Time is over!");
-                this.Close();
+                Application.Restart();
             }
             LabelTimeLeft.Text = "      Time Left : " + countTimer / 60 + ":" + ((countTimer % 60) >= 10 ? (countTimer % 60).ToString() : "0" + countTimer % 60);
         }
