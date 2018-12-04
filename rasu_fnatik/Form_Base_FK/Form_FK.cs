@@ -105,6 +105,14 @@ namespace Form_Base_FK
                 foreach (DataGridViewColumn dc in dataGridView1.Columns)
                 {
                     dataGridView1.Columns[dc.Name].Visible = !dc.Name.Contains("id");
+                    
+                }
+                foreach (DataGridViewRow dr in dataGridView1.Rows)
+                {
+                    foreach (DataGridViewCell dcell in dr.Cells)
+                    {
+                        if (dcell.Value.ToString() == "") dcell.Value = "NULL";
+                    }
                 }
                 PortarDades();
             }
