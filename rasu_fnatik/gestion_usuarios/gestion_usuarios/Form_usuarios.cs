@@ -16,5 +16,9 @@ namespace gestion_usuarios
             Form_FK_Load(sender, e);
         }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

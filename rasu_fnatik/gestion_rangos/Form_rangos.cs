@@ -24,5 +24,10 @@ namespace gestion_rangos
             tabla = "UserRanks";
             Form1_Load(sender, e);
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

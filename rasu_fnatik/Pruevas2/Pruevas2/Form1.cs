@@ -51,9 +51,7 @@ namespace Form_Base
         {
             if (IsNew)
             {
-                if (ComprobarTextBoxs())
-                {
-                    try { 
+                  try { 
                         foreach (Control ctr in this.Controls)
                         {
                             if (ctr.GetType() == typeof(ControlTextBox))
@@ -64,9 +62,13 @@ namespace Form_Base
                                 {
                                     ctr1.Text = "1";
                                 }
-                                else
+                                else if(ComprobarTextBoxs())
                                 {
                                     dr[ctr1.Campo] = ctr.Text;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
                                 }
                             }
                         }
@@ -76,12 +78,8 @@ namespace Form_Base
                     catch (System.NullReferenceException re)
                     {
                         PortarDades();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
-                }
+                    }               
+               
 
             }
             bd.Actualitzar(ds, "select * from " + tabla);
