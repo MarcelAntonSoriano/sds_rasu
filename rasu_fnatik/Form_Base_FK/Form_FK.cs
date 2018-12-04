@@ -39,6 +39,7 @@ namespace Form_Base_FK
                 }
                 PortarDades();
             }
+            button2.Enabled = PermitirActualizar();
         }
 
         public void PortarDades()
@@ -72,6 +73,7 @@ namespace Form_Base_FK
                     ctr.Text = "";                    
                 }                
             }
+            button2.Enabled = PermitirActualizar();
         }
         //Actualizar
         private void button2_Click(object sender, EventArgs e)
@@ -82,9 +84,7 @@ namespace Form_Base_FK
                 {
                     if (ctr.GetType() == typeof(ControlTextBox))
                     {
-                        
                         ControlTextBox ctr1 = (ControlTextBox)ctr;
-
                         dr[ctr1.Campo] = ctr.Text;
                     }                   
                 }
@@ -93,6 +93,19 @@ namespace Form_Base_FK
             bd.Actualitzar(ds, "select * from " + tabla);
             PortarDades();
             IsNew = false;
+        }
+
+        public bool PermitirActualizar()
+        {
+            bool permitir = true;
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr.GetType() == typeof(ControlTextBox))
+                {
+                    if (((ControlTextBox)ctr).Text == "") permitir = false;
+                }
+            }
+            return permitir;
         }
     }
 }
