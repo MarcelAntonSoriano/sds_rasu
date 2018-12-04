@@ -27,19 +27,7 @@ namespace Form_Base_FK
 
         public void Form_FK_Load(object sender, EventArgs e)
         {
-            //dataGridView1.ColumnHe
-            if (tabla != null)
-            {
-                ds = bd.PortarTaula(tabla);
-                if (DesignMode) return;
-                dataGridView1.DataSource = ds.Tables[0];
-                foreach (DataGridViewColumn dc in dataGridView1.Columns)
-                {
-                    dataGridView1.Columns[dc.Name].Visible = !dc.Name.Contains("id");
-                }
-                PortarDades();
-            }
-            button2.Enabled = PermitirActualizar();
+            ActualitzarDataset();
         }
 
         public void PortarDades()
@@ -73,29 +61,32 @@ namespace Form_Base_FK
                     ctr.Text = "";                    
                 }                
             }
-            button2.Enabled = PermitirActualizar();
         }
         //Actualizar
         private void button2_Click(object sender, EventArgs e)
         {
             if (IsNew)
             {
-                foreach (Control ctr in this.Controls)
+                if (ComprobarTextBoxs())
                 {
-                    if (ctr.GetType() == typeof(ControlTextBox))
+                    foreach (Control ctr in this.Controls)
                     {
-                        ControlTextBox ctr1 = (ControlTextBox)ctr;
-                        dr[ctr1.Campo] = ctr.Text;
-                    }                   
+                        if (ctr.GetType() == typeof(ControlTextBox))
+                            dr[((ControlTextBox)ctr).Campo] = ctr.Text;
+                    }
+                    ds.Tables[0].Rows.Add(dr);
+                    PortarDades();
                 }
-                ds.Tables[0].Rows.Add(dr);
+                else
+                {
+                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
+                }
             }
             bd.Actualitzar(ds, "select * from " + tabla);
-            PortarDades();
             IsNew = false;
         }
 
-        public bool PermitirActualizar()
+        public bool ComprobarTextBoxs()
         {
             bool permitir = true;
             foreach (Control ctr in this.Controls)
@@ -106,6 +97,21 @@ namespace Form_Base_FK
                 }
             }
             return permitir;
+        }
+
+        public void ActualitzarDataset ()
+        {
+            if (tabla != null)
+            {
+                ds = bd.PortarTaula(tabla);
+                if (DesignMode) return;
+                dataGridView1.DataSource = ds.Tables[0];
+                foreach (DataGridViewColumn dc in dataGridView1.Columns)
+                {
+                    dataGridView1.Columns[dc.Name].Visible = !dc.Name.Contains("id");
+                }
+                PortarDades();
+            }
         }
     }
 }
