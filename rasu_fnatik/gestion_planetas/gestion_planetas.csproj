@@ -31,6 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Clase_bbdd_fnatik, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Clase_bbdd_fnatik.dll</HintPath>
+    </Reference>
+    <Reference Include="sdsCodi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\sdsCodi.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -52,6 +60,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ControlTextBox_FNATIK\Control_FNATIK\Control_FNATIK.csproj">
+      <Project>{05220585-359F-4068-9F85-2F483005FF54}</Project>
+      <Name>Control_FNATIK</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Form_Base_FK\Form_Base_FK.csproj">
       <Project>{bfcd1677-8d39-420e-acaf-3ccd2c88a302}</Project>
       <Name>Form_Base_FK</Name>

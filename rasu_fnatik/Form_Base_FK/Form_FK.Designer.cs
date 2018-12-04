@@ -60,10 +60,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(413, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(548, 32);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.Size = new System.Drawing.Size(807, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(672, 350);
             this.dataGridView1.TabIndex = 1;
             // 
             // button1
