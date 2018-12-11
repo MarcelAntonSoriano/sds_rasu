@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 using Control_FNATIK;
@@ -27,12 +22,14 @@ namespace Form_Base_FK
 
         public void Form_FK_Load(object sender, EventArgs e)
         {
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0,0,0,0);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(1, 255, 255, 255);
+            dataGridView1.EnableHeadersVisualStyles = false;
             ActualitzarDataset();
         }
 
         public void PortarDades()
-        {                   
-
+        {
             foreach (Control ctr in this.Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
@@ -61,33 +58,30 @@ namespace Form_Base_FK
         //Actualizar
         private void button2_Click(object sender, EventArgs e)
         {
-            if (IsNew)
-            {
-                if (ComprobarTextBoxs())
+            /*if (IsNew)
+            { */           
+                try
                 {
-                    try{ 
 
-                        foreach (Control ctr in this.Controls)
-                        {
-                            if (ctr.GetType() == typeof(ControlTextBox))
-                                dr[((ControlTextBox)ctr).Campo] = ctr.Text;
-                        }
-                        ds.Tables[0].Rows.Add(dr);
-                        PortarDades();
-                    }
-                    catch (System.NullReferenceException re)
+                    foreach (Control ctr in this.Controls)
                     {
-                        PortarDades();
+                        if (ctr.GetType() == typeof(ControlTextBox))
+                        {
+                            dr[((ControlTextBox)ctr).Campo] = ctr.Text;
+                            ds.Tables[0].Rows.Add(dr);
+                            PortarDades();
+                        }
                     }
-                    
                 }
-                else
+                catch (System.NullReferenceException)
                 {
-                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
+                   PortarDades();
                 }
-            }
-            bd.Actualitzar(ds, "select * from " + tabla);
-            IsNew = false;
+                //ds.Clear();
+                //ActualitzarDataset();
+                bd.Actualitzar(ds, "select * from " + tabla);
+                IsNew = false;
+            //}
         }
 
         public bool ComprobarTextBoxs()
@@ -113,7 +107,6 @@ namespace Form_Base_FK
                 foreach (DataGridViewColumn dc in dataGridView1.Columns)
                 {
                     dataGridView1.Columns[dc.Name].Visible = !dc.Name.Contains("id");
-                    
                 }
                 foreach (DataGridViewRow dr in dataGridView1.Rows)
                 {

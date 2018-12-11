@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using Clase_bbdd_fnatik;
 using System.Configuration;
 
 namespace rasu_fnatik
 {
-    
     public partial class login : Form
     {
         public DataSet ds = new DataSet();
@@ -27,11 +19,7 @@ namespace rasu_fnatik
         private void textBox(object sender, EventArgs e)
         {
             TextBox tb = (TextBox)sender;
-
-            if (tb.Text != null)
-            {
-                btn_login.Enabled = true;
-            }
+            btn_login.Enabled = tb.Text != null;
         }
 
         public void btn_login_Click(object sender, EventArgs e)
@@ -39,36 +27,30 @@ namespace rasu_fnatik
 
             string UserId = null;
 
-            if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0)
-            {
-                string query = "SELECT UserCategories.DescCategory, UserCategories.AccessLevel, Users.idUser, Users.UserName FROM UserCategories INNER JOIN Users ON UserCategories.idUserCategory = Users.idUserCategory WHERE(Users.Login = '" + textBox1.Text + "') AND (Users.Password = '" + textBox2.Text + "')";
-                ds = bbdd.PortarPerConsulta(query);
-
-                
-                UserId = (ds.Tables[0].Rows[0][2]).ToString();              
-            
-
-                if (ds.Tables[0].Rows.Count==1)
-                {
-                    ConfigurationManager.AppSettings.Set("idUsuari", UserId);                
-
-                    Menu menu_metro = new Menu();
-                    menu_metro.Show();                
-                
-                    this.Close();
-                }
-                else
-                {
-                    label3.Visible = true;
-                }
-            }
-            else
+            if (textBox1.Text.Length <= 0 && textBox2.Text.Length <= 0)
             {
                 label3.Visible = true;
-
+                return;
             }
 
+            string query = "SELECT UserCategories.DescCategory, UserCategories.AccessLevel, Users.idUser, Users.UserName FROM UserCategories INNER JOIN Users ON UserCategories.idUserCategory = Users.idUserCategory WHERE(Users.Login = '" + textBox1.Text + "') AND (Users.Password = '" + textBox2.Text + "')";
+            ds = bbdd.PortarPerConsulta(query);
+
+            if (ds.Tables[0].Rows.Count != 1)
+            {
+                label3.Visible = true;
+                return;
+            }
+
+            UserId = (ds.Tables[0].Rows[0][2]).ToString();
+            ConfigurationManager.AppSettings.Set("idUsuari", UserId);
+
+            Menu menu_metro = new Menu();
+            menu_metro.Show();
+
+            this.Close();
         }
+
         private void btn_about_Click(object sender, EventArgs e)
         {
             About about = new About();

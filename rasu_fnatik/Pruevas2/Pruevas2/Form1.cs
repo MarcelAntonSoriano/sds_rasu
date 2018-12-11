@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
-using Control_FNATIK;
 using Clase_bbdd_fnatik;
-using CustomControlButton;
-using System.Text.RegularExpressions;
+using Control_FNATIK;
+
 
 namespace Form_Base
 {
@@ -22,6 +22,10 @@ namespace Form_Base
 
         public void Form1_Load(object sender, EventArgs e)
         {
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 0, 0, 0);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(1, 255, 255, 255);
+
+            dataGridView1.EnableHeadersVisualStyles = false;
             if (DesignMode) return;
             if (tabla != null)
             {
@@ -43,7 +47,6 @@ namespace Form_Base
                     ((ControlTextBox)ctr).DataBindings.Add("Text", ds.Tables[0], ((ControlTextBox)ctr).Campo);
                 }
             }
-            //dataGridView1.DataSource = ds.Tables[0];
         }
         
         //Actualizar
@@ -51,48 +54,39 @@ namespace Form_Base
         {
             if (IsNew)
             {
-                  try { 
-                        foreach (Control ctr in this.Controls)
-                        {
-                            if (ctr.GetType() == typeof(ControlTextBox))
-                            {
-                                ControlTextBox ctr1 = (ControlTextBox)ctr;                        
-                       
-                                if (ctr1.Campo.Contains("id"))
-                                {
-                                    ctr1.Text = "1";
-                                }
-                                else if(ComprobarTextBoxs())
-                                {
-                                    dr[ctr1.Campo] = ctr.Text;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
-                                }
-                            }
-                        }
-                        ds.Tables[0].Rows.Add(dr);
-                        PortarDades();
-                    }
-                    catch (System.NullReferenceException re)
+                //try { 
+                    foreach (Control ctr in this.Controls)
                     {
-                        PortarDades();
-                    }               
-               
+                        if (ctr.GetType() == typeof(ControlTextBox))
+                        {
+                            ControlTextBox ctr1 = (ControlTextBox)ctr;                        
+                   
+                            if (ctr1.Campo.Contains("id"))ctr1.Text = "1";
 
+                            else if(ComprobarTextBoxs()) dr[ctr1.Campo] = ctr.Text;
+
+                            else MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
+                        }
+                    }
+                    ds.Tables[0].Rows.Add(dr);
+                    PortarDades();
+                //}
+                //catch (System.NullReferenceException re)
+                //{
+                //    PortarDades();
+                //}               
             }
             bd.Actualitzar(ds, "select * from " + tabla);
             IsNew = false;
         }
+
         //Nuevo
         private void button1_Click(object sender, EventArgs e)
         {
-
             dr = ds.Tables[0].NewRow();
             IsNew = true;
 
-            foreach (Control ctr in this.Controls)
+            foreach (Control ctr in Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
                 {
@@ -100,19 +94,16 @@ namespace Form_Base
                     ctr.Text = "";                 
                 }
             } 
-            foreach(Control ctr in this.Controls)
+            foreach(Control ctr in Controls)
             {
-                if (ctr.GetType() == typeof(ControlTextBox))
-                {
-                    ctr.Focus();
-                }
+                if (ctr.GetType() == typeof(ControlTextBox)) ctr.Focus();
             }
         }
 
         public bool ComprobarTextBoxs()
         {
             bool permitir = true;
-            foreach (Control ctr in this.Controls)
+            foreach (Control ctr in Controls)
             {
                 if (ctr.GetType() == typeof(ControlTextBox))
                 {
@@ -121,6 +112,5 @@ namespace Form_Base
             }
             return permitir;
         }
-
     }
 }

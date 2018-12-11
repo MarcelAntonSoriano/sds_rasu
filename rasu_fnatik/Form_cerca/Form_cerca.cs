@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 
@@ -31,7 +25,7 @@ namespace Form_cerca
             {
                 nomColumna = dataGridView2.Columns[i].Name;
 
-                if ((!(nomColumna.Contains("Code"))&& (!(nomColumna.Contains("Desc")))))
+                if (!(nomColumna.Contains("Code") && !(nomColumna.Contains("Desc"))))
                 {
                     dataGridView2.Columns[nomColumna].Visible = false;
                 }
@@ -43,9 +37,10 @@ namespace Form_cerca
         {
             string idTaula;
 
-            foreach(Form frm in Application.OpenForms)
+            try
             {
-                
+                foreach (Form frm in Application.OpenForms)
+                {
                     if (frm.Name == FormulariOrigenGlobal)
                     {
                         foreach (Control c in frm.Controls)
@@ -67,7 +62,11 @@ namespace Form_cerca
                             }
                         }
                     }
-               
+                }
+            }
+            catch(Exception )
+            {
+
             }
         }
     }

@@ -45,6 +45,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(596, 89);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(94, 38);
@@ -62,7 +63,7 @@
             this.controlTextBox4.Name = "controlTextBox4";
             this.controlTextBox4.NoSalirSiVacia = false;
             this.controlTextBox4.Size = new System.Drawing.Size(100, 20);
-            this.controlTextBox4.TabIndex = 7;
+            this.controlTextBox4.TabIndex = 2;
             this.controlTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.controlTextBox4_KeyPress);
             // 
             // controlTextBox3
@@ -86,12 +87,12 @@
             this.controlTextBox2.ControlSds = null;
             this.controlTextBox2.EsForanea = false;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox2.Location = new System.Drawing.Point(306, 102);
+            this.controlTextBox2.Location = new System.Drawing.Point(306, 107);
             this.controlTextBox2.MaxLength = 30;
             this.controlTextBox2.Name = "controlTextBox2";
             this.controlTextBox2.NoSalirSiVacia = false;
             this.controlTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.controlTextBox2.TabIndex = 4;
+            this.controlTextBox2.TabIndex = 1;
             // 
             // controlTextBox1
             // 
@@ -100,17 +101,19 @@
             this.controlTextBox1.ControlSds = null;
             this.controlTextBox1.EsForanea = false;
             this.controlTextBox1.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox1.Location = new System.Drawing.Point(306, 63);
+            this.controlTextBox1.Location = new System.Drawing.Point(306, 76);
             this.controlTextBox1.MaxLength = 4;
             this.controlTextBox1.Name = "controlTextBox1";
             this.controlTextBox1.NoSalirSiVacia = false;
             this.controlTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.controlTextBox1.TabIndex = 3;
+            this.controlTextBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(196, 63);
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(196, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 8;
@@ -119,7 +122,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 102);
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(221, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 9;
@@ -128,7 +133,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 139);
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(196, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 10;
@@ -137,8 +144,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 25);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(12, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(282, 25);
             this.label4.TabIndex = 11;
@@ -170,6 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label4);

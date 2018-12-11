@@ -46,6 +46,15 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,11 +100,12 @@
             // sdsCodi3
             // 
             this.sdsCodi3.AbreCS = null;
+            this.sdsCodi3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sdsCodi3.CausesValidation = false;
             this.sdsCodi3.ClaseCS = "Form_cerca.dll";
             this.sdsCodi3.ControlID = "controlTextBox11";
             this.sdsCodi3.FormCS = "Form_cerca.Form_cerca";
-            this.sdsCodi3.Location = new System.Drawing.Point(83, 450);
+            this.sdsCodi3.Location = new System.Drawing.Point(72, 365);
             this.sdsCodi3.Name = "sdsCodi3";
             this.sdsCodi3.NombreCodi = "CodeFiliation";
             this.sdsCodi3.NombreDesc = "DescFiliations";
@@ -109,11 +119,12 @@
             // sdsCodi2
             // 
             this.sdsCodi2.AbreCS = null;
+            this.sdsCodi2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sdsCodi2.CausesValidation = false;
             this.sdsCodi2.ClaseCS = "Form_cerca.dll";
             this.sdsCodi2.ControlID = "controlTextBox10";
             this.sdsCodi2.FormCS = "Form_cerca.Form_cerca";
-            this.sdsCodi2.Location = new System.Drawing.Point(83, 418);
+            this.sdsCodi2.Location = new System.Drawing.Point(72, 331);
             this.sdsCodi2.Name = "sdsCodi2";
             this.sdsCodi2.NombreCodi = "CodeSpecie";
             this.sdsCodi2.NombreDesc = "DescSpecie";
@@ -127,11 +138,12 @@
             // sdsCodi1
             // 
             this.sdsCodi1.AbreCS = null;
+            this.sdsCodi1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sdsCodi1.CausesValidation = false;
             this.sdsCodi1.ClaseCS = "Form_cerca.dll";
             this.sdsCodi1.ControlID = "controlTextBox9";
             this.sdsCodi1.FormCS = "Form_cerca.Form_cerca";
-            this.sdsCodi1.Location = new System.Drawing.Point(83, 308);
+            this.sdsCodi1.Location = new System.Drawing.Point(74, 183);
             this.sdsCodi1.Name = "sdsCodi1";
             this.sdsCodi1.NombreCodi = "CodeSector";
             this.sdsCodi1.NombreDesc = "DescSector";
@@ -149,7 +161,7 @@
             this.controlTextBox8.ControlSds = null;
             this.controlTextBox8.EsForanea = false;
             this.controlTextBox8.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox8.Location = new System.Drawing.Point(169, 534);
+            this.controlTextBox8.Location = new System.Drawing.Point(158, 473);
             this.controlTextBox8.Name = "controlTextBox8";
             this.controlTextBox8.NoSalirSiVacia = false;
             this.controlTextBox8.Size = new System.Drawing.Size(100, 20);
@@ -162,7 +174,7 @@
             this.controlTextBox7.ControlSds = null;
             this.controlTextBox7.EsForanea = false;
             this.controlTextBox7.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox7.Location = new System.Drawing.Point(169, 508);
+            this.controlTextBox7.Location = new System.Drawing.Point(159, 438);
             this.controlTextBox7.Name = "controlTextBox7";
             this.controlTextBox7.NoSalirSiVacia = false;
             this.controlTextBox7.Size = new System.Drawing.Size(100, 20);
@@ -175,7 +187,7 @@
             this.controlTextBox6.ControlSds = null;
             this.controlTextBox6.EsForanea = false;
             this.controlTextBox6.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox6.Location = new System.Drawing.Point(169, 482);
+            this.controlTextBox6.Location = new System.Drawing.Point(159, 403);
             this.controlTextBox6.Name = "controlTextBox6";
             this.controlTextBox6.NoSalirSiVacia = false;
             this.controlTextBox6.Size = new System.Drawing.Size(100, 20);
@@ -188,7 +200,7 @@
             this.controlTextBox5.ControlSds = null;
             this.controlTextBox5.EsForanea = false;
             this.controlTextBox5.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox5.Location = new System.Drawing.Point(169, 392);
+            this.controlTextBox5.Location = new System.Drawing.Point(160, 298);
             this.controlTextBox5.Name = "controlTextBox5";
             this.controlTextBox5.NoSalirSiVacia = false;
             this.controlTextBox5.Size = new System.Drawing.Size(100, 20);
@@ -201,7 +213,7 @@
             this.controlTextBox4.ControlSds = null;
             this.controlTextBox4.EsForanea = false;
             this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox4.Location = new System.Drawing.Point(169, 366);
+            this.controlTextBox4.Location = new System.Drawing.Point(160, 261);
             this.controlTextBox4.Name = "controlTextBox4";
             this.controlTextBox4.NoSalirSiVacia = false;
             this.controlTextBox4.Size = new System.Drawing.Size(100, 20);
@@ -214,7 +226,7 @@
             this.controlTextBox3.ControlSds = null;
             this.controlTextBox3.EsForanea = false;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox3.Location = new System.Drawing.Point(169, 340);
+            this.controlTextBox3.Location = new System.Drawing.Point(160, 224);
             this.controlTextBox3.Name = "controlTextBox3";
             this.controlTextBox3.NoSalirSiVacia = false;
             this.controlTextBox3.Size = new System.Drawing.Size(100, 20);
@@ -227,7 +239,7 @@
             this.controlTextBox2.ControlSds = null;
             this.controlTextBox2.EsForanea = false;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox2.Location = new System.Drawing.Point(169, 282);
+            this.controlTextBox2.Location = new System.Drawing.Point(162, 152);
             this.controlTextBox2.Name = "controlTextBox2";
             this.controlTextBox2.NoSalirSiVacia = false;
             this.controlTextBox2.Size = new System.Drawing.Size(100, 20);
@@ -240,7 +252,7 @@
             this.controlTextBox1.ControlSds = null;
             this.controlTextBox1.EsForanea = false;
             this.controlTextBox1.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Texto;
-            this.controlTextBox1.Location = new System.Drawing.Point(169, 256);
+            this.controlTextBox1.Location = new System.Drawing.Point(163, 114);
             this.controlTextBox1.Name = "controlTextBox1";
             this.controlTextBox1.NoSalirSiVacia = false;
             this.controlTextBox1.Size = new System.Drawing.Size(100, 20);
@@ -274,11 +286,107 @@
             this.label5.BackColor = System.Drawing.SystemColors.ControlText;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(99, 118);
+            this.label5.Location = new System.Drawing.Point(135, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(204, 25);
             this.label5.TabIndex = 20;
             this.label5.Text = "Gestión de planetas";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Location = new System.Drawing.Point(382, 238);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(45, 246);
+            this.panel2.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(56, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Codigo Planeta:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(71, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Descripción:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(85, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Longitud:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(94, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Latitud:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(89, 301);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Parsecs:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(102, 406);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Foto:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(74, 442);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "IP Planeta:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(92, 476);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Puerto:";
             // 
             // Form_planetas
             // 
@@ -287,6 +395,15 @@
             this.BackgroundImage = global::gestion_planetas.Properties.Resources._1305869556_star_wars_pulp_fiction_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1275, 608);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.controlTextBox11);
@@ -325,6 +442,15 @@
             this.Controls.SetChildIndex(this.controlTextBox11, 0);
             this.Controls.SetChildIndex(this.toolStrip1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -351,5 +477,14 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

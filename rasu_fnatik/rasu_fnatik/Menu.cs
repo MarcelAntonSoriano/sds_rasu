@@ -3,7 +3,6 @@ using System.Data;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 using System.Configuration;
-using System.Reflection;
 using CustomControlButton;
 using System.Media;
 
@@ -26,12 +25,12 @@ namespace rasu_fnatik
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -50,7 +49,6 @@ namespace rasu_fnatik
         }
         private void ToolStripNamer()
         {           
-            
             Clase_BBDD cb = new Clase_BBDD();
             string id = ConfigurationManager.AppSettings["idUsuari"].ToString();
             string query = "SELECT UserCategories.AccessLevel, Users.idUser, Users.CodeUser, Users.UserName, UserRanks.DescRank FROM UserCategories, Users, UserRanks where UserCategories.idUserCategory = Users.idUserCategory AND Users.idUserRank = UserRanks.idUserRank AND idUser = " + id;
@@ -99,6 +97,24 @@ namespace rasu_fnatik
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             sp.Stop();
+        }
+
+        private void CerrarSesion_click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+
+            try
+            {
+                foreach (Form frm in Application.OpenForms)
+                {
+                    if (frm.Name != "login") frm.Close();
+                }
+            }
+            catch
+            {
+
+            }       
         }
     }
 }

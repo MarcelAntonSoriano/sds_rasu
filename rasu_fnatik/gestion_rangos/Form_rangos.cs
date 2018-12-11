@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace gestion_rangos
@@ -15,8 +8,6 @@ namespace gestion_rangos
         public Form_rangos()
         {
             InitializeComponent();
-
-
         }
 
         private void Form_rangos_Load(object sender, EventArgs e)
@@ -27,7 +18,7 @@ namespace gestion_rangos
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

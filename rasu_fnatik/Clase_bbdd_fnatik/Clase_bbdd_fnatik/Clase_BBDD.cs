@@ -27,12 +27,11 @@ namespace Clase_bbdd_fnatik
 
         public DataSet PortarPerConsulta(string consulta)
         {
-            
-                taula = new DataSet();
-                Abrir();
-                da = new SqlDataAdapter(consulta, conexion);
-                da.Fill(taula);
-                Cerrar();
+            taula = new DataSet();
+            Abrir();
+            da = new SqlDataAdapter(consulta, conexion);
+            da.Fill(taula);
+            Cerrar();
           
             return taula;
         }
@@ -57,6 +56,7 @@ namespace Clase_bbdd_fnatik
             da = new SqlDataAdapter(consulta, conexion);
             da.Fill(taula);
             Cerrar();
+
             return taula;
         }
        
@@ -64,7 +64,6 @@ namespace Clase_bbdd_fnatik
         {
             SqlCommand sqlCommand = new SqlCommand(query);            
             sqlCommand.ExecuteNonQuery();
-         
         }        
         public DataSet Actualitzar(DataSet t_entrada,string consulta)
         {
@@ -74,7 +73,7 @@ namespace Clase_bbdd_fnatik
                 da = new SqlDataAdapter(consulta, conexion);
                 SqlCommandBuilder builder = new SqlCommandBuilder(da);
 
-                da.Update(t_entrada.Tables[0]);
+                var x = da.Update(t_entrada.Tables[0]);
                 Cerrar();
                 
             }

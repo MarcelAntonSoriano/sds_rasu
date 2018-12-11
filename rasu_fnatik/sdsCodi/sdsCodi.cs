@@ -138,13 +138,6 @@ namespace sdsCodi
             }
         }
 
-        public void ValidarCodiCS(int numId)
-        {
-            bool insertar = false;
-
-            query = "select * from "+_nombreTaula + " where  " + NombreID + " = '" + Text +"'";
-            
-        }
         //EVENTOS
         private void TextCode_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -191,6 +184,8 @@ namespace sdsCodi
             // Label
             // 
             this.Label.AutoSize = true;
+            this.Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Label.Location = new System.Drawing.Point(20, 6);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(35, 13);
@@ -217,6 +212,7 @@ namespace sdsCodi
             // 
             // sdsCodi
             // 
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CausesValidation = false;
             this.Controls.Add(this.TextDesc);
             this.Controls.Add(this.TextCode);
@@ -252,8 +248,6 @@ namespace sdsCodi
             DLLBD = Activator.CreateInstance(tipus, args);
             Form frm2 = ((Form)DLLBD);
             frm2.Show();  
-            
         }
-       
     }
 }
