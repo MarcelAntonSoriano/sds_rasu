@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using Clase_bbdd_fnatik;
 
@@ -11,9 +12,18 @@ namespace Form_cerca
         DataSet ds = new DataSet();
 
         string query, nomColumna, FormulariOrigenGlobal, ControlOrigenGlobal;
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public Form_cerca(string FormulariOrigen, string ControlOrigen, string NomTaula)
         {
             InitializeComponent();
+            dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 0, 0, 0);
+            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(1, 255, 255, 255);
+            dataGridView2.EnableHeadersVisualStyles = false;
             FormulariOrigenGlobal = FormulariOrigen;
             ControlOrigenGlobal = ControlOrigen;
             ds = bd.PortarTaula(NomTaula);
