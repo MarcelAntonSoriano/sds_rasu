@@ -44,6 +44,7 @@ namespace Form_Base_FK
         private void button1_Click(object sender, EventArgs e)
         {
             dr = ds.Tables[0].NewRow();
+            
             IsNew = true;
 
             foreach (Control ctr in this.Controls)
@@ -58,30 +59,42 @@ namespace Form_Base_FK
         //Actualizar
         private void button2_Click(object sender, EventArgs e)
         {
-            /*if (IsNew)
-            { */           
-                try
+            if (IsNew)
+            {            
+                /*try
+                {*/
+                foreach (Control ctr in this.Controls)
                 {
-
-                    foreach (Control ctr in this.Controls)
+                    if (ctr.GetType() == typeof(ControlTextBox))
                     {
-                        if (ctr.GetType() == typeof(ControlTextBox))
-                        {
-                            dr[((ControlTextBox)ctr).Campo] = ctr.Text;
-                            ds.Tables[0].Rows.Add(dr);
-                            PortarDades();
-                        }
+                        ControlTextBox ctr1 = (ControlTextBox)ctr;
+
+                        if (ComprobarTextBoxs()) dr[ctr1.Campo] = ctr.Text;
+
                     }
                 }
+
+                if (ComprobarTextBoxs())
+                {
+                    ds.Tables[0].Rows.Add(dr);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
+                }
+                PortarDades();
+                   
+                /*}
                 catch (System.NullReferenceException)
                 {
                    PortarDades();
-                }
+                }*/
                 //ds.Clear();
                 //ActualitzarDataset();
-                bd.Actualitzar(ds, "select * from " + tabla);
-                IsNew = false;
-            //}
+            
+            }
+            bd.Actualitzar(ds, "select * from " + tabla);
+            IsNew = false;
         }
 
         public bool ComprobarTextBoxs()

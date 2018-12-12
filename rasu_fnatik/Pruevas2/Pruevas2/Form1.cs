@@ -55,21 +55,35 @@ namespace Form_Base
             if (IsNew)
             {
                 //try { 
-                    foreach (Control ctr in this.Controls)
+                foreach (Control ctr in this.Controls)
+                {
+                    if (ctr.GetType() == typeof(ControlTextBox))
                     {
-                        if (ctr.GetType() == typeof(ControlTextBox))
-                        {
-                            ControlTextBox ctr1 = (ControlTextBox)ctr;                        
-                   
-                            if (ctr1.Campo.Contains("id"))ctr1.Text = "1";
+                        ControlTextBox ctr1 = (ControlTextBox)ctr;
 
-                            else if(ComprobarTextBoxs()) dr[ctr1.Campo] = ctr.Text;
-
-                            else MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
-                        }
+                        if (ctr1.Campo.Contains("id")) ctr1.Text = "1";
                     }
+                }
+                foreach (Control ctr in this.Controls)
+                {
+                    if (ctr.GetType() == typeof(ControlTextBox))
+                    {
+                        ControlTextBox ctr1 = (ControlTextBox)ctr;
+
+                        if (ComprobarTextBoxs()) dr[ctr1.Campo] = ctr.Text;
+                         
+                    }
+                }
+               
+                if (ComprobarTextBoxs())
+                {
                     ds.Tables[0].Rows.Add(dr);
-                    PortarDades();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor rellene correctamente los campos o cree Nuevo.");
+                }
+                 PortarDades();
                 //}
                 //catch (System.NullReferenceException re)
                 //{

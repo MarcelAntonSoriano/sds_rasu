@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using Form_Base_FK;
 
 namespace gestion_planetas
@@ -19,6 +20,33 @@ namespace gestion_planetas
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void controlTextBox3_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void controlTextBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void controlTextBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
