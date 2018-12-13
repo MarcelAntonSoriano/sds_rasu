@@ -46,6 +46,7 @@
             this.controlTextBox3.Campo = "idUserRank";
             this.controlTextBox3.CausesValidation = false;
             this.controlTextBox3.ControlSds = null;
+            this.controlTextBox3.Enabled = false;
             this.controlTextBox3.EsForanea = false;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox3.Location = new System.Drawing.Point(590, 82);
@@ -83,7 +84,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(579, 82);
+            this.panel1.Location = new System.Drawing.Point(575, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 64);
             this.panel1.TabIndex = 6;

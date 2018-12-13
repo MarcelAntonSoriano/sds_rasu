@@ -73,6 +73,7 @@
             this.controlTextBox2.Campo = "idUserRank";
             this.controlTextBox2.CausesValidation = false;
             this.controlTextBox2.ControlSds = null;
+            this.controlTextBox2.Enabled = false;
             this.controlTextBox2.EsForanea = true;
             this.controlTextBox2.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox2.Location = new System.Drawing.Point(360, 267);
@@ -86,6 +87,7 @@
             this.controlTextBox3.Campo = "idUserCategory";
             this.controlTextBox3.CausesValidation = false;
             this.controlTextBox3.ControlSds = null;
+            this.controlTextBox3.Enabled = false;
             this.controlTextBox3.EsForanea = true;
             this.controlTextBox3.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox3.Location = new System.Drawing.Point(360, 314);
@@ -99,6 +101,7 @@
             this.controlTextBox4.Campo = "idPlanet";
             this.controlTextBox4.CausesValidation = false;
             this.controlTextBox4.ControlSds = null;
+            this.controlTextBox4.Enabled = false;
             this.controlTextBox4.EsForanea = true;
             this.controlTextBox4.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox4.Location = new System.Drawing.Point(360, 359);
@@ -112,6 +115,7 @@
             this.controlTextBox5.Campo = "idSpecie";
             this.controlTextBox5.CausesValidation = false;
             this.controlTextBox5.ControlSds = null;
+            this.controlTextBox5.Enabled = false;
             this.controlTextBox5.EsForanea = true;
             this.controlTextBox5.EsTipo = Control_FNATIK.ControlTextBox.Tipos.Numero;
             this.controlTextBox5.Location = new System.Drawing.Point(360, 405);
@@ -356,7 +360,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1268, 479);
+            this.ClientSize = new System.Drawing.Size(1268, 494);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
